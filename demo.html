@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projections</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            color: #a3a1a1;
+        }
+
+        canvas {
+            min-width: 300px;
+            min-height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <canvas id="canvas"></canvas>
+    </div>
+<script type="text/javascript">
+const w = 300;
+const h = 175;
+const app = document.getElementById('app');
+const canvas = document.getElementById('canvas');
+canvas.width = w;
+canvas.height = h;
+app.append(canvas);
+const ctx = canvas.getContext('2d');
+function drawGrid(ctx) {
+    ctx.save();
+    let i = 0;
+    for (i = 0; i < w; i+=5) {
+        ctx.beginPath();
+        ctx.lineWidth = i % 25 == 0 ? 0.5 : 0.25;
+        ctx.strokeStyle = 'gray';
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, h);    
+        i % 25 == 0 && ctx.fillText(i, i, 10);    
+        ctx.stroke();
+    }
+    for (i = 0; i < h; i+=5) {
+        ctx.beginPath();
+        ctx.lineWidth = i % 25 == 0 ? 0.5 : 0.25;
+        ctx.strokeStyle = 'gray';
+        ctx.moveTo(0, i);
+        ctx.lineTo(w, i);  
+        i % 25 == 0 && ctx.fillText(i, 0, i);       
+        ctx.stroke();
+    }
+    ctx.restore();
+}
+//=========================================================================
+// POLYFILL for requestAnimationFrame
+//=========================================================================
+
+if (!window.requestAnimationFrame) { // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+    window.requestAnimationFrame = window.webkitRequestAnimationFrame || 
+                                window.mozRequestAnimationFrame    || 
+                                window.oRequestAnimationFrame      || 
+                                window.msRequestAnimationFrame     || 
+                                function(callback, element) {
+                                  window.setTimeout(callback, 1000 / 60);
+                                }
+}
+
+const ts = () => new Date().getTime();
+
+function loop({ render, update, canvas }) {
+    let now = 0, 
+        last = ts(),
+        step = 1/60,
+        dt = 0,
+        gdt = 0;
+    
+    function frame() {
+        now = ts();
+        dt = Math.min(1, (now - last) / 1000);
+        gdt += dt;
+        while (gdt > step) {
+            gdt -= step;
+            update(step);
+        }
+        render();
+        last = now;
+        requestAnimationFrame(frame, canvas);
+    }
+
+    frame();
+    
+}
+
+function Player() {
+    this.x = 75;
+    this.y = 142;
+    this.size = 10;
+    this.angle = 0;
+    this.speed = 5;
+}
+
+Player.prototype.update = function (dt) {
+    this.speed += 1.15 * dt;
+    this.speed = Math.max(0, Math.min(this.speed, 15));
+    this.angle = (this.angle + dt * this.speed) % (2 * Math.PI);
+    
+    if (this.y <= 140) {
+        this.y += 1.15;
+    } else {
+        this.y -= 0.25;
+    }
+}
+
+Player.prototype.renderTyres = function (ctx) {
+    let x1 = this.x - this.size * 2.5,
+        x2 = this.x + this.size * 2.5,
+        y = this.y, 
+        angle = this.angle, 
+        size = this.size;
+    function drawTyre(ctx, x) {
+        ctx.save();
+        ctx.translate(x,y);
+        ctx.rotate(angle);
+        ctx.translate(-x,-y);
+        ctx.beginPath();
+        ctx.strokeStyle = '#535252';
+        ctx.fillStyle = '#d3cdcd';
+        ctx.lineWidth = 3;
+        ctx.arc(x, y, size, 0, 2*Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.lineWidth = 1;
+        ctx.moveTo(x, y + size);
+        ctx.lineTo(x, y);
+        ctx.lineTo(x + size, y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x - size, y);
+        ctx.lineTo(x, y);
+        ctx.lineTo(x, y - size);
+        ctx.stroke();
+        ctx.translate(x,y);
+        ctx.rotate(-angle);
+        ctx.translate(-x,-y);
+        ctx.restore();
+    }
+    drawTyre(ctx, x1);
+    drawTyre(ctx, x2);
+}
+
+Player.prototype.render = function (ctx) {
+    let x1 = this.x - this.size * 2.5,
+        x2 = this.x + this.size * 2.5;
+    let dx = 2;
+    ctx.save();
+    this.renderTyres(ctx);
+    ctx.beginPath();
+    ctx.fillStyle = 'gray';
+    ctx.moveTo(x1 + this.size + dx*1.85, this.y);
+    ctx.lineTo(x2 - this.size - dx*2, this.y);
+    ctx.quadraticCurveTo(x2, 125, x2 + this.size * 1.5, this.y);
+    ctx.lineTo(this.x + 7*this.size, this.y);
+    ctx.lineTo(this.x + 6.85*this.size, this.y - this.size);
+    ctx.lineTo(this.x + 4.5*this.size, this.y - 1.75*this.size);
+    ctx.lineTo(this.x + 1.5*this.size, this.y - 3.5*this.size);
+    ctx.lineTo(this.x - 3.5*this.size, this.y - 3.5*this.size);
+    ctx.lineTo(this.x - 5.5*this.size, this.y - 1.5*this.size);
+    ctx.lineTo(this.x - 6.5*this.size, this.y - 1.5*this.size);
+    ctx.lineTo(this.x - 6.5*this.size, this.y + 0.25*this.size);
+    ctx.lineTo(this.x - 4*this.size, this.y + 0.25*this.size);
+    ctx.quadraticCurveTo(x1, 125, x1 + this.size * 1.5, this.y);
+    ctx.stroke();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = '#DDDDDD';
+    ctx.lineWidth = 0.2;
+    ctx.moveTo(this.x + 4.5*this.size, this.y - 1.75*this.size);
+    ctx.lineTo(this.x + 0.5*this.size, this.y - 1.75*this.size);
+    ctx.lineTo(this.x + 0.5*this.size, this.y - 3.5*this.size);
+    ctx.lineTo(this.x + 0.5*this.size, this.y - 3.5*this.size);
+    ctx.lineTo(this.x + 1.5*this.size, this.y - 3.5*this.size);
+    ctx.lineTo(this.x + 4.5*this.size, this.y - 1.75*this.size);
+    ctx.fill();
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.fillStyle = '#333333';
+    ctx.lineWidth = 1;
+    ctx.arc(this.x + 0.5*this.size, this.y - 2.5*this.size, 3.5, -Math.PI/2, Math.PI/2);
+    ctx.fill();
+    ctx.moveTo(this.x + 0.5*this.size, this.y - 1.5*this.size - 3.5);
+    ctx.lineTo(this.x + 2.5*this.size, this.y - 1.5*this.size - 3.5);
+    ctx.lineTo(this.x + 2*this.size, this.y - 2*this.size - 3.5);
+    ctx.stroke();
+    ctx.restore();
+}
+
+function Board() {
+    this.x = w+65;
+    this.y = 100;
+    this.size = 20;
+    this.adIndex = 0;
+    this.ads = ['💻', '☠️', '🏩', '🚧'];
+}
+
+Board.prototype.update = function (dt) {
+    this.x -= 45*dt;
+    if (this.x < -3*this.size) {
+        this.x = w + Math.random() * 20 + 70;
+        ++this.adIndex;
+        if (this.adIndex > this.ads.length - 1) this.adIndex = 0;
+    }
+}
+
+Board.prototype.render = function (ctx) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.fillStyle = '#797676';
+    ctx.strokeStyle = '#797676';
+    ctx.fillRect(this.x+0.85*this.size, this.y-this.size,0.45*this.size,3.5*this.size);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(this.x+1.25*this.size, this.y);
+    ctx.lineTo(this.x+1.25*this.size, this.y+2.5*this.size);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.fillStyle = '#FFFFFF';
+    ctx.rect(this.x-this.size, this.y-2.75*this.size, 4*this.size, 2.5*this.size);
+    ctx.fill();
+    ctx.stroke();
+    ctx.font = '2rem serif';
+    ctx.fillStyle = 'black'
+    ctx.fillText(this.ads[this.adIndex], this.x-0.125*this.size, this.y-this.size);
+    ctx.restore();
+}
+
+function Cloud() {
+    this.x = w*Math.random() + 100;
+    this.y = Math.random() * (30 - 25) + 25;
+    this.speed = 5*Math.random() + 5;
+    this.size = Math.random() * 10 + 1;
+}
+
+Cloud.prototype.update = function (dt) {
+    this.x -= this.speed * dt;
+    if (this.x < -100) {
+        this.x = 100*Math.random() + w;
+    }
+}
+
+Cloud.prototype.render = function (ctx) {
+    let s = this.size;
+    ctx.save();
+    ctx.globalAlpha = 0.5;
+    ctx.strokeStyle = '#a3a1a1';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, s, Math.PI, -Math.PI/2);
+    ctx.arc(this.x+s, this.y, s, 0, Math.PI/4);
+    ctx.arc(this.x+s, this.y+s/2, s, Math.PI/4, Math.PI/2);
+    ctx.quadraticCurveTo(this.x-s, this.y+s, this.x-s*2, this.y+2*s);
+    ctx.quadraticCurveTo(this.x-2*s, this.y+s, this.x-4*s, this.y+2*s);
+    ctx.quadraticCurveTo(this.x-2*s, this.y+s, this.x-5*s, this.y+2*s);
+    ctx.quadraticCurveTo(this.x-s, this.y, this.x-4*s, this.y+s);
+    ctx.arc(this.x-1.5*s, this.y+s, 10, -Math.PI, -Math.PI/7);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    ctx.restore();
+}
+
+let segments = [], 
+    interval = 5;
+
+const last = () => segments[segments.length - 1]; 
+
+let canMove = false;
+
+const player = new Player();
+player.size = 4.25*w/h;
+
+const board = new Board();
+board.ads = ['😎','🤖','🔆','🎃','⚽','🥧'];
+
+const clouds = new Array(6).fill(null).map(c => new Cloud());
+
+function update(dt) {
+    
+    if (!segments.length) segments.push({ x: 0, y: 150 });
+    else 
+        segments.push({
+            x: last().x+interval, 
+            y: Math.random() * (4) + 148,
+            stone: Math.random() * 5 > 3 && Math.random() * 5 < 3
+        });
+    
+    if (last().x > w) {
+        segments.shift();
+        segments = segments.map(s => {
+            s.x -= interval;
+            return s;
+        });
+        !canMove && (canMove = true);
+    }
+
+    if (canMove) {
+        player.update(dt);
+        board.update(dt);
+        clouds.forEach(c => c.update(dt));
+    }
+
+}
+
+function render() {
+    ctx.clearRect(0,0,w,h);
+
+    clouds.forEach(c => c.render(ctx));
+
+    board.render(ctx);
+
+    let prev;
+    segments.forEach((s, i) => {
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(0,0,0,0.7)';
+        prev = segments[i - 1];
+        ctx.moveTo(prev?.x ?? 0, prev?.y ?? 150);
+        ctx.lineTo(s.x, s.y);
+        s?.stone && ctx.fillRect(s.x-interval, s.y+interval, interval, 1);
+        ctx.stroke();
+    });
+
+    player.render(ctx);
+
+}
+
+loop({ render, update, canvas });
+
+
+</script>
+</body>
+</html>
