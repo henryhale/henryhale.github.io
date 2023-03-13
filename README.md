@@ -6,7 +6,7 @@
 ### About Me
 
 Henry Hale is an independent developer passionate about learning web technologies. Henry is self-taught and loves building stuff from scratch to understand the architecture behind the existing technologies.
-While not programming, he's researching essential physics and mathematics concepts for which he writes primary scientific papers that describe their application. 
+While not programming, he's watching movies and past tech events.
 
 ### Contact
 
