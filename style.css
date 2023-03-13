@@ -107,6 +107,7 @@ body,
 .about {
   text-align: center;
   opacity: 80%;
+  font-size: small;
 }
 
 .links {
