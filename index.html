@@ -83,21 +83,17 @@
       <div id="floor"></div>
     </div>
     <script type="text/javascript">
-      const main = document.querySelector('.main');
-      main.addEventListener('mousemove', (e) => {
-        const p = { x: e.clientX, y: e.clientY };
-        const s = {
-          x: document.body.clientWidth,
-          y: document.body.clientHeight,
-        };
-        const m = { x: 0.5 * s.x, y: 0.5 * s.y };
-        if (p.x > m.x) {
-          main.style.transform = `rotateY(2.5deg)`;
+      var main = document.querySelector('.main');
+      main.addEventListener('mousemove', function (e) {
+        if (e.clientX > 0.5 * document.body.clientWidth) {
+          main.style.transform = 'rotateY(2.5deg)';
         } else {
-          main.style.transform = `rotateY(-2.5deg)`;
+          main.style.transform = 'rotateY(-2.5deg)';
         }
       });
-      main.addEventListener('mouseout', () => (main.style.transform = ''));
+      main.addEventListener('mouseout', function () {
+        main.style.transform = '';
+      });
     </script>
   </body>
 </html>
