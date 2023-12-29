@@ -11,7 +11,7 @@ While not programming, he's watching movies and past tech events.
 ### Contact
 
 <div>
-<a href="mailto:devhenryhale@proton.me" target="_blank">
+<a href="mailto:devhenryhale@hotmail.com" target="_blank">
 <img src=https://img.shields.io/badge/email-%2324292e.svg?&style=for-the-badge&logo=gmail&logoColor=white alt=email style="margin-bottom: 5px;" />
 </a>
 <a href="https://twitter.com/devhenryhale" target="_blank">
