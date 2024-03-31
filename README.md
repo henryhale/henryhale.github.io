@@ -18,3 +18,15 @@ While not programming, he's watching movies and past tech events.
 <img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
 </a>  
 </div>
+
+### Credit
+All credit goes to [@markhorn-dev](https://github.com/markhorn-dev) for his amazing Astro blog and portifolio theme:
+[Astro Nano](https://github.com/markhorn-dev/astro-nano) - a static, minimalist, lightweight, lightning fast portfolio and blog theme.
+Built with Astro, Tailwind and Typescript, no frameworks.
+
+### License
+[Astro Nano](https://github.com/markhorn-dev/astro-nano) - MIT License
+
+Released under the [MIT License](https://github.com/henryhale/henryhale.github.io/blob/main/LICENSE.txt).
+
+&copy; Copyright 2024-Present, [Henry Hale](https://github.com/henryhale).
