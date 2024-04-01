@@ -1,0 +1,24 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+import { SITE, HOME } from "@consts";
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <section>
+      <article class="space-y-10">
+        <h4 class="animate font-semibold text-black dark:text-white">
+          404 {`|`} NOT FOUND
+        </h4>
+        <p class="animate">
+          :( Sorry, the page you requested for does not exist.
+        </p>
+        <div class="animate">
+          <BackToPrev href="/"> Back to Home </BackToPrev>
+        </div>
+      </article>
+    </section>
+  </Container>
+</PageLayout>
