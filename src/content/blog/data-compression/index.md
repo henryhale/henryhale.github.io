@@ -23,7 +23,7 @@ date: "Jul 22 2024"
 
 In this blog post, you'll journey with me through one of the most interesting fields of computer science with a relatable analogy. 
 
-Earlier this year, I was studying Numerical Analysis (Mathematics) when Lagrange's Interpolation ignited the idea of designing the ultimate data compression algorithm that would compress data to a near-zero size.
+Earlier this year, I was studying Numerical Analysis (Mathematics) when [Lagrange interpolating polynomial](https://en.m.wikipedia.org/wiki/Lagrange_polynomial) ignited the idea of designing the ultimate [data compression](https://en.m.wikipedia.org/wiki/Data_compression) algorithm that would compress data to a near-zero size.
 
 The idea was: *"What if we didn't store actual data but rather functions for regenerating the data? Convert the text data into ASCII values, scale them down and use curve fitting to map each value to its index in the list/line. Voila! 🚀"*
 
@@ -58,7 +58,7 @@ Now, envision those same particles coming together, forming a more cohesive stru
 
 In this state, our information particles are tightly packed, with minimal space between them. Each particle's position is crucial, representing data in its most compact form while still preserving its essence.
 
->Currently, this is where we are at with the DEFLATE algorithm. Can we go beyond that? Theoretically, yes! Practically, not quite yet.
+>Currently, this is where we are at with the [Deflate](https://en.m.wikipedia.org/wiki/Deflate) algorithm. Can we go beyond that? Theoretically, yes! Practically, not quite yet.
 
 ### 4️⃣  `🔹` - "One Particle" State (Theoretical Limit)
 
@@ -75,8 +75,8 @@ Imagine you're in a room where each air molecule represents a bit of data. The r
 ## How This Relates to Real Data Compression
 
 In real-world data compression, we're essentially trying to move our data from a "*gaseous*" state to more compact states. There are basically two types of data compression algorithms;
-- Lossless compression
-- Lossy compression
+- [Lossless compression](https://en.m.wikipedia.org/wiki/Lossless_compression)
+- [Lossy compression](https://en.m.wikipedia.org/wiki/Lossy_compression)
 
 In our journey through states of information matter, lossless compression algorithms act like careful molecular arrangers, moving our data particles from their gaseous state to a more ordered liquid state. They find patterns and redundancies, grouping similar particles together without losing a single one. When we decompress, we get back exactly what we started with.
 
@@ -98,11 +98,11 @@ This is *a measure of the inherent information content in data*. Think of entrop
 
 ### Shannon's Source Coding Theorem
 
-This fundamental theorem in information theory sets the theoretical limits for lossless data compression. It is like a law of physics for our information matter. It states that *we can't compress data (substance) below its entropy (liquid state) without losing information (particles).*
+This fundamental [theorem](https://en.m.wikipedia.org/wiki/Shannon%27s_source_coding_theorem) in information theory sets the theoretical limits for lossless data compression. It is like a law of physics for our information matter. It states that *we can't compress data (substance) below its entropy (liquid state) without losing information (particles).*
 
 ### Kolmogorov Complexity
 
-This represents *the length of the shortest possible program that could generate the data*. It's the theoretical "*one particle*" state of our analogy - the ultimate compressed form.
+[This](https://en.m.wikipedia.org/wiki/Kolmogorov_complexity) represents *the length of the shortest possible program that could generate the data*. It's the theoretical "*one particle*" state of our analogy - the ultimate compressed form.
 
 ## The Library of Everything
 
@@ -128,9 +128,9 @@ Imagine a machine that can compress any file you give it. You compress a 1MB fil
 ## Real-World Examples
 
 Several algorithms have been designed and put to use. The following are some of the real-world applications:
-- **Text compression** (like ZIP files) works well because written language often contains patterns and redundancies.
-- **Image compression** comes in lossless (PNG) and lossy (JPEG) varieties. JPEG can achieve higher compression ratios by discarding some visual information.
-- **Video compression** (like H.265) uses complex algorithms to reduce file sizes dramatically, crucial for streaming services.
+- **Text compression** (like [ZIP](https://en.m.wikipedia.org/wiki/ZIP_(file_format)) files) works well because written language often contains patterns and redundancies.
+- **Image compression** comes in lossless ([PNG](https://en.m.wikipedia.org/wiki/PNG)) and lossy ([JPEG](https://en.m.wikipedia.org/wiki/JPEG)) varieties. JPEG can achieve higher compression ratios by discarding some visual information.
+- **Video compression** (like [H.265](https://en.m.wikipedia.org/wiki/High_Efficiency_Video_Coding)) uses complex algorithms to reduce file sizes dramatically, crucial for streaming services.
 
 ## Where the Analogy Breaks Down
 
