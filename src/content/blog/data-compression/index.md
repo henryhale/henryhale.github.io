@@ -4,6 +4,8 @@ description: "The molecular approach to data compression."
 date: "Jul 22 2024"
 ---
 
+![states of matter meme](https://i.kym-cdn.com/photos/images/facebook/002/187/117/701.jpg)
+
 **Table of Contents**
 - [Introduction](#introduction)
 - [The Analogy Explained](#the-analogy-explained)
