@@ -4,7 +4,6 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
-// import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
 
 const blog = (await getCollection("blog"))
@@ -17,20 +16,6 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
-// const allwork = (await getCollection("work"))
-//   .sort(
-//     (a, b) =>
-//       new Date(b.data.dateStart).valueOf() -
-//       new Date(a.data.dateStart).valueOf()
-//   )
-//   .slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
-
-// const work = await Promise.all(
-//   allwork.map(async (item) => {
-//     const { Content } = await item.render();
-//     return { ...item, Content };
-//   })
-// );
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -45,22 +30,14 @@ const projects = (await getCollection("projects"))
       <section>
         <article class="space-y-4">
           <p class="animate">
-            Born and raised at Home, I've always been passionate about exploring
-            and developing software. I am <Link
-              href="https://www.edx.org/cs50"
-              aria-label="Introduction to Computer Science from Harvard"
-              external
-            >
-              self-taught
-            </Link> and love building stuff from scratch to understand the architecture
-            behind the existing technologies. It helps me develop better applications
-            and also innovate better solutions.
+            I love building stuff from scratch to understand the architecture
+            behind the existing technologies. It improves my problem-solving skills and the ability to develop better applications
           </p>
           <p class="animate">
             My curiousity has always been drawn to challenges that push me to
-            grow and evolve. Fun fact: I overthink and imagine a lot of stuff. I
-            offered Physics, Mathematics, Chemistry and Computer Science in
-            college. My intersets align with science-backed experiences...Oh, I
+            grow and evolve. Crazy fact: I overthink and imagine a lot of stuff. I
+            offered physics, mathematics, chemistry and computer science in
+            college. My interests align with science-backed experiences...Oh, I
             love science.
           </p>
           <p class="animate">
@@ -76,41 +53,13 @@ const projects = (await getCollection("projects"))
           </p>
           <p class="animate">
             Through this website, you'll find a glimpse into my world - from my
-            latest thoughts on software development to the creative projects
-            that inspire me.
+            latest projects to thoughts on software development that inspire me.
             <br />
             <br />
             Welcome to my corner of the internet.
           </p>
         </article>
       </section>
-
-      <!-- <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Work Experience
-          </h5>
-          <Link href="/work"> See all work </Link>
-        </div>
-        <ul class="flex flex-col space-y-4">
-          {
-            work.map((entry) => (
-              <li>
-                <div class="text-sm opacity-75">
-                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-                </div>
-                <div class="font-semibold text-black dark:text-white">
-                  {entry.data.company}
-                </div>
-                <div class="text-sm opacity-75">{entry.data.role}</div>
-                <article>
-                  <entry.Content />
-                </article>
-              </li>
-            ))
-          }
-        </ul>
-      </section> -->
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
@@ -165,7 +114,6 @@ const projects = (await getCollection("projects"))
                 >
                   {SOCIAL.NAME}
                 </Link>
-             
               </li>
             ))
           }

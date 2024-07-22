@@ -11,7 +11,7 @@ You know the drill - it's that nerve-wracking moment when you stare at a blank r
 wondering if your next move will lead to greatness or disaster. 
 But fear not, my friends, for within that single click lies the potential to change the world forever.
 
-Today, I want to take you on a journey through the chronicles of technological progress.  
+Today, I want to take you on a journey through the chronicles of technological progress.
 Picture this: a lone developer, fueled by caffeine and determination, faces an empty repository.
 With a deep breath and a decisive click, they make the fateful leap into the abyss of creativity - the 'Initial commit.'
 But wait, what's this? 
@@ -34,6 +34,6 @@ So, the next time you find yourself staring at that blank canvas of a repository
 Embrace the chaos, revel in the challenges, and who knows?
 You just might be on the brink of creating something truly extraordinary.
 
-Happy coding, my friends. 
+Happy Coding! 
 
 The world is waiting for your 'Initial commit' masterpiece!
