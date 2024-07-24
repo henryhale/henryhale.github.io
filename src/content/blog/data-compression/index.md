@@ -21,6 +21,8 @@ date: "Jul 22 2024"
 - [Practical Implications](#practical-implications)
 - [Conclusion](#conclusion)
 
+>**Disclaimer**: This is a simplified analogy meant to introduce concepts, not a rigorous technical explanation.
+
 ## Introduction
 
 In this blog post, you'll journey with me through one of the most interesting fields of computer science with a relatable analogy. 
