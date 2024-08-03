@@ -62,7 +62,7 @@ Now, envision those same particles coming together, forming a more cohesive stru
 
 In this state, our information particles are tightly packed, with minimal space between them. Each particle's position is crucial, representing data in its most compact form while still preserving its essence.
 
->Currently, this is where we are at with the [Deflate](https://en.m.wikipedia.org/wiki/Deflate) algorithm. Can we go beyond that? Theoretically, yes! Practically, not quite yet.
+>Currently, this is where we are at with the [LZMA](https://en.m.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm) or [Deflate](https://en.m.wikipedia.org/wiki/Deflate) algorithm. Can we go beyond that? Theoretically, yes! Practically, not quite yet.
 
 ### 4️⃣  `🔹` - "One Particle" State (Theoretical Limit)
 
