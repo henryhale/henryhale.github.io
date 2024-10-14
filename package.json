@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "dev:network": "astro dev --host",
+    "dev:net": "astro dev --host",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "preview:network": "astro preview --host",
+    "preview:net": "astro preview --host",
     "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
