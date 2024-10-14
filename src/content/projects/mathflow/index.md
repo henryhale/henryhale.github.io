@@ -4,6 +4,7 @@ description: "🟦 A scripting language designed for solving mathematical expres
 date: "Mar 31 2024"
 demoURL: "https://henryhale.github.io/mathflow-demo/"
 repoURL: "https://github.com/henryhale/mathflow"
+featured: true
 ---
 
 ![Mathflow](https://github.com/henryhale/mathflow/raw/master/docs/public/logo.svg)

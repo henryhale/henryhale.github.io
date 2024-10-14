@@ -4,6 +4,7 @@ description: "💲 Create web-based command line interfaces."
 date: "Mar 31 2024"
 demoURL: "https://xterminal.js.org/demo/"
 repoURL: "https://github.com/henryhale/xterminal"
+featured: true
 ---
 
 ![XTerminal](https://github.com/henryhale/vix/raw/master/media/preview.png)
