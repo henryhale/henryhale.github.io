@@ -19,9 +19,7 @@ type Props = CollectionEntry<"blog">
 
 const post = Astro.props
 
-const { Content, headings } = await render(post)
-
-/* headings - for table of contents */
+const { Content } = await render(post)
 ---
 
 <PageLayout title={post.data.title} description={post.data.description}>
