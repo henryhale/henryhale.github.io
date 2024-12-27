@@ -1,25 +1,25 @@
 ---
-import "../styles/global.css";
-import "@fontsource/inter/latin-400.css";
-import "@fontsource/inter/latin-600.css";
-import "@fontsource/lora/400.css";
-import "@fontsource/lora/600.css";
-import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2";
-import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2";
-import lora400 from "@fontsource/lora/files/lora-latin-400-normal.woff2";
-import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
-import { ViewTransitions } from "astro:transitions";
-import { SITE } from "@consts";
+import "../styles/global.css"
+import "@fontsource/inter/latin-400.css"
+import "@fontsource/inter/latin-600.css"
+import "@fontsource/lora/400.css"
+import "@fontsource/lora/600.css"
+import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2"
+import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2"
+import lora400 from "@fontsource/lora/files/lora-latin-400-normal.woff2"
+import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2"
+import { ClientRouter } from "astro:transitions"
+import { SITE } from "@consts"
 
 interface Props {
-  title: string;
-  description: string;
-  image?: string;
+	title: string
+	description: string
+	image?: string
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const { title, description, image = SITE.IMAGE } = Astro.props;
+const { title, description, image = SITE.IMAGE } = Astro.props
 ---
 
 <!-- Global Metadata -->
@@ -57,92 +57,83 @@ const { title, description, image = SITE.IMAGE } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={image} />
 
-<ViewTransitions />
-
-<script>
-  import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
-  document.addEventListener("astro:before-swap", (e) =>
-    [
-      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll(
-        "link[as=\"font\"]"
-      ),
-    ].forEach((link) => link.remove())
-  );
-</script>
+<ClientRouter />
 
 <script is:inline>
-  function init() {
-    preloadTheme();
-    onScroll();
-    animate();
+	function init() {
+		preloadTheme()
+		onScroll()
+		animate()
 
-    const backToTop = document.getElementById("back-to-top");
-    backToTop?.addEventListener("click", (event) => scrollToTop(event));
+		const backToTop = document.getElementById("back-to-top")
+		backToTop?.addEventListener("click", (event) => scrollToTop(event))
 
-    const backToPrev = document.getElementById("back-to-prev");
-    backToPrev?.addEventListener("click", () => window.history.back());
+		const backToPrev = document.getElementById("back-to-prev")
+		backToPrev?.addEventListener("click", () => window.history.back())
 
-    const lightThemeButton = document.getElementById("light-theme-button");
-    lightThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "light");
-      toggleTheme(false);
-    });
+		const lightThemeButton = document.getElementById("light-theme-button")
+		lightThemeButton?.addEventListener("click", () => {
+			localStorage.setItem("theme", "light")
+			toggleTheme(false)
+		})
 
-    const darkThemeButton = document.getElementById("dark-theme-button");
-    darkThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "dark");
-      toggleTheme(true);
-    });
+		const darkThemeButton = document.getElementById("dark-theme-button")
+		darkThemeButton?.addEventListener("click", () => {
+			localStorage.setItem("theme", "dark")
+			toggleTheme(true)
+		})
 
-    const systemThemeButton = document.getElementById("system-theme-button");
-    systemThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "system");
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
-    });
+		const systemThemeButton = document.getElementById("system-theme-button")
+		systemThemeButton?.addEventListener("click", () => {
+			localStorage.setItem("theme", "system")
+			toggleTheme(
+				window.matchMedia("(prefers-color-scheme: dark)").matches
+			)
+		})
 
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        if (localStorage.theme === "system") {
-          toggleTheme(event.matches);
-        }
-      });
+		window
+			.matchMedia("(prefers-color-scheme: dark)")
+			.addEventListener("change", (event) => {
+				if (localStorage.theme === "system") {
+					toggleTheme(event.matches)
+				}
+			})
 
-    document.addEventListener("scroll", onScroll);
-  }
+		document.addEventListener("scroll", onScroll)
+	}
 
-  function animate() {
-    const animateElements = document.querySelectorAll(".animate");
+	function animate() {
+		const animateElements = document.querySelectorAll(".animate")
 
-    animateElements.forEach((element, index) => {
-      setTimeout(() => {
-        element.classList.add("show");
-      }, index * 150);
-    });
-  }
+		animateElements.forEach((element, index) => {
+			setTimeout(() => {
+				element.classList.add("show")
+			}, index * 150)
+		})
+	}
 
-  function onScroll() {
-    if (window.scrollY > 0) {
-      document.documentElement.classList.add("scrolled");
-    } else {
-      document.documentElement.classList.remove("scrolled");
-    }
-  }
+	function onScroll() {
+		if (window.scrollY > 0) {
+			document.documentElement.classList.add("scrolled")
+		} else {
+			document.documentElement.classList.remove("scrolled")
+		}
+	}
 
-  function scrollToTop(event) {
-    event.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
+	function scrollToTop(event) {
+		event.preventDefault()
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		})
+	}
 
-  function toggleTheme(dark) {
-    const css = document.createElement("style");
+	function toggleTheme(dark) {
+		const css = document.createElement("style")
 
-    css.appendChild(
-      document.createTextNode(
-        `* {
+		css.appendChild(
+			document.createTextNode(
+				`* {
              -webkit-transition: none !important;
              -moz-transition: none !important;
              -o-transition: none !important;
@@ -150,32 +141,34 @@ const { title, description, image = SITE.IMAGE } = Astro.props;
              transition: none !important;
           }
         `
-      )
-    );
+			)
+		)
 
-    document.head.appendChild(css);
+		document.head.appendChild(css)
 
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+		if (dark) {
+			document.documentElement.classList.add("dark")
+		} else {
+			document.documentElement.classList.remove("dark")
+		}
 
-    window.getComputedStyle(css).opacity;
-    document.head.removeChild(css);
-  }
+		window.getComputedStyle(css).opacity
+		document.head.removeChild(css)
+	}
 
-  function preloadTheme() {
-    const userTheme = localStorage.theme;
+	function preloadTheme() {
+		const userTheme = localStorage.theme
 
-    if (userTheme === "light" || userTheme === "dark") {
-      toggleTheme(userTheme === "dark");
-    } else {
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
-    }
-  }
+		if (userTheme === "light" || userTheme === "dark") {
+			toggleTheme(userTheme === "dark")
+		} else {
+			toggleTheme(
+				window.matchMedia("(prefers-color-scheme: dark)").matches
+			)
+		}
+	}
 
-  document.addEventListener("DOMContentLoaded", () => init());
-  document.addEventListener("astro:after-swap", () => init());
-  preloadTheme();
+	document.addEventListener("DOMContentLoaded", () => init())
+	document.addEventListener("astro:after-swap", () => init())
+	preloadTheme()
 </script>
