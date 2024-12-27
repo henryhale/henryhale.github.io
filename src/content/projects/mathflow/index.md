@@ -12,7 +12,7 @@ featured: true
 MathFlow is a lightweight and expressive scripting language designed for mathematical expressions and calculations.
 It provides a simple and intuitive syntax for performing mathematical operations, including support for standard arithmetic, functions like sin, cos, tan, and other functions.
 
-It's really simple and precise. It takes 5 minutes to master the language.  Believe me, you will like it.
+It's really simple and precise. It takes 5 minutes to master the language. Believe me, you will like it.
 
 ### License
 
