@@ -3,7 +3,6 @@ import type { Site, Metadata, Socials } from "@types"
 export const SITE: Site = {
 	IMAGE: "https://github.com/henryhale.png",
 	NAME: "Henry Hale",
-	EMAIL: "",
 	NUM_POSTS_ON_HOMEPAGE: 4,
 	NUM_WORKS_ON_HOMEPAGE: 4,
 	NUM_PROJECTS_ON_HOMEPAGE: 4,
