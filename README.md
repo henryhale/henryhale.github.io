@@ -1,5 +1,5 @@
 <div align="center">
-<img width=75 src="https://avatars.githubusercontent.com/u/92443116?v=4" />
+<img width=100 src="https://avatars.githubusercontent.com/u/92443116?v=4" />
 <p><b>Henry Hale</b></h2>
 </div>
 
