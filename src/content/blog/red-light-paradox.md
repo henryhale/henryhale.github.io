@@ -54,8 +54,8 @@ light itself. Light is a form of electromagnetic radiation that travels in
 waves. Different colors of light correspond to differenct wavelengths on this
 electromagnetic spectrum.
 
-[image: a diagram of the electromagnetic spectrum, hightlighting the visible
-light portion and specifically the red light wavelength]
+![A diagram of the electromagnetic spectrum, hightlighting the visible light portion](https://www.miniphysics.com/wp-content/uploads/2011/07/electromagneticspectrum.jpg)
+_A diagram of the electromagnetic spectrum, hightlighting the visible light portion_
 
 Red light, which we percieve as the color red, has a wavelength of approximately
 620-750 nanometers. But here's where it gets interesting: light is also composed
@@ -79,9 +79,9 @@ light and colr. Let's explore some interesting examples from various fields:
   light, individual pixels create the illusion of a complete image. A single
   pixel doesn't contain a miniature version of the picture - it is just a tiny
   dot of color. It's only when thousands or millions of these pixels are
-  arranged together that we percieve a coherent image. [image: a zoomed-in
-  portion of a digital image showing individual pixels, next to the full
-  image] [image: a zoomed-in portion of an led matrix display]
+  arranged together that we percieve a coherent image.
+
+    ![A zoomed-in portion of a screen](https://upload.wikimedia.org/wikipedia/commons/c/c4/ReconstructionsFromPixels.png) _A zoomed-in portion of a screen_
 
 - **Atoms in Materials**: Consider a gold ring. While the ring is shiny and
   golden, the idividual atoms that make it up are neither shiny nor
