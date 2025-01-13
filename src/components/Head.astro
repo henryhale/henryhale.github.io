@@ -9,7 +9,6 @@ import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2"
 import lora400 from "@fontsource/lora/files/lora-latin-400-normal.woff2"
 import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2"
 import { ClientRouter } from "astro:transitions"
-import { SITE } from "@consts"
 
 interface Props {
 	title: string
@@ -19,15 +18,17 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const { title, description, image = SITE.IMAGE } = Astro.props
+const { title, description } = Astro.props
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="shortcut icon" type="image/png" href={image} />
-<link rel="icon" type="image/x-icon" href={image} />
 <meta name="generator" content={Astro.generator} />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 
 <!-- Font preloads -->
 <link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
@@ -48,14 +49,14 @@ const { title, description, image = SITE.IMAGE } = Astro.props
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content="/ogimage.png" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={image} />
+<meta property="twitter:image" content="/ogimage.png" />
 
 <ClientRouter />
 
