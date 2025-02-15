@@ -86,7 +86,7 @@ To create a terminal interface, we need to create an instance of the XTerminal c
 ```js
 // main.js
 
-const term = new XTerminal();
+const term = new XTerminal()
 ```
 
 There will be nothing rendered on your page not until the `term` instance is mounted to our div element using the `term.mount()` method.
@@ -94,8 +94,8 @@ There will be nothing rendered on your page not until the `term` instance is mou
 ```js
 //main.js
 
-const term = new XTerminal();
-term.mount('#app');
+const term = new XTerminal()
+term.mount("#app")
 ```
 
 The `#app` string corresponds to the CSS selector of the target element the instance will be rendered. In this case, `<div id="app"></div>` is the target element.
@@ -107,10 +107,10 @@ In this section, we are going to capture user input, the GitHub username, and pr
 Before we prompt the user, we need a prompt string that appears whenever we need user input. Add this code to our `main.js`
 
 ```js
-const promptStyle = '[search] $ ';
+const promptStyle = "[search] $ "
 
 function ask() {
-	term.write(promptStyle);
+	term.write(promptStyle)
 }
 ```
 
@@ -122,7 +122,7 @@ The terminal handles interactions mainly via events.
 To capture user input, we are going to register an event listener on the `data` event using `term.on()` method. The `data` event is triggered whenever a user types some text and presses the `Enter` key. Add this code to our `main.js`
 
 ```js
-term.on('data', input => {
+term.on("data", (input) => {
 	// do something with 'input'
 })
 ```
