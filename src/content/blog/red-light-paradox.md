@@ -146,11 +146,11 @@ sociology to artificial intelligence.
 Well, some many people have approached this in several fascinating ways that
 fill their conscience. I am not any different and this is my view:
 
-- Water wets other surfaces. A water molecules doesn't wet a surface, it's the
+- Water wets other surfaces. A single water molecule doesn't wet a surface, it's the
   collective effect of many. I argue that water is not wet and that `wetting`
   is as a result of action of water on something solid. Molecules in water are
   not layered up like bricks so it is wrong to say: A water molecule on top of
-  another implies that the former molecule wets the latter.
+  another does not imply that the former molecule wets the latter.
 
 > Most scientists define wetness as a liquid's ability to maintain contact with
 > a solid surface, meaning that water itself is not wet, but can make other
