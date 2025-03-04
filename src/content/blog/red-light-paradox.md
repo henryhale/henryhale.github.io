@@ -10,7 +10,12 @@ also a fascinating paradox: the particles that make up red light aren't actually
 red themselves. This concept isn't just a quirk of physics - it's a powerful
 analogy that applies to many areas of life and science. Just as invisible
 photons create the visible phenomenon of red light, many systems in our world
-are composed of parts that don't resemble the whole they create. The rest of
+are composed of parts that don't resemble the whole they create.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Misc_pollen.jpg/440px-Misc_pollen.jpg)
+_Image of pollen grains taken on a SEM shows the characteristic depth of field of SEM micrographs: [view source](https://en.wikipedia.org/wiki/Scanning_electron_microscope?wprov=sfla1)_
+
+ The rest of
 this post tends to set common grounds first as well as attempt to answer the
 question: `is water wet?` using the red light paradox.
 
