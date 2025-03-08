@@ -10,9 +10,9 @@ _Migrating canada geese - [Getty Images](https://www.gettyimages.com/detail/phot
 
 Yesterday, I asked my colleagues in a chat:
 
-> _Suppose you're on your carrier path, would you accept and commit to a cleaner vacancy with hope that you'll be promoted to a department in line with your carrier?_
+> _Suppose you're on your career path, would you accept and commit to a cleaner vacancy with hope that you'll advance to a department in line with your career within the same organization?_
 
-The discussion was centered on whether accepting a non-career-related job, like a cleaner position, is a viable strategy for eventually transitioning into a desired career. Some participants argue that taking any available job is better than staying unemployed, as it provides exposure to potential opportunities and professional connections. Others caution that promotions are not guaranteed, and one could get stuck in an unrelated role. 
+The discussion was centered on whether accepting a non-career-related job, like a cleaner position, is a viable strategy for eventually transitioning into a desired career. The major reason for this is; establishing financial stability while looking out for career-related job opportunities. Some participants argue that taking any available job is better than staying unemployed, as it provides exposure to potential opportunities and professional connections. Others caution that promotions are not guaranteed, and one could get stuck in an unrelated role. 
 
 One of my colleague, X, within minutes of our discussion, had informed us several separate times about how _"humble"_ and _"open-minded"_ he was. Yet as our conversation progressed, he dominated the discussion, dismissed alternative viewpoints, and redirected every topic back to his own perspective, experience and achievements. This created a disconnect diverting from the main topic. However, the consensus leaned towards using such jobs as stepping stones while actively seeking better opportunities and skills rather than relying solely on internal promotion.
 
