@@ -78,7 +78,7 @@ intrinsic property of the photons themselves.
 ## Some Key Examples in Different Fields
 
 This concept of parts not resembling the whole they create extends far beyond
-light and colr. Let's explore some interesting examples from various fields:
+light and color. Let's explore some interesting examples from various fields:
 
 - **Pixels in Digital Images**: Just as photons create the illusion of red
   light, individual pixels create the illusion of a complete image. A single
@@ -155,7 +155,7 @@ fill their conscience. I am not any different and this is my view:
   collective effect of many. I argue that water is not wet and that `wetting`
   is as a result of action of water on something solid. Molecules in water are
   not layered up like bricks so it is wrong to say: A water molecule on top of
-  another does not imply that the former molecule wets the latter.
+  another implies that the former molecule wets the latter.
 
 > Most scientists define wetness as a liquid's ability to maintain contact with
 > a solid surface, meaning that water itself is not wet, but can make other
