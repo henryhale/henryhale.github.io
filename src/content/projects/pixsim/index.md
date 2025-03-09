@@ -7,7 +7,7 @@ repoURL: "https://github.com/henryhale/pixsim"
 featured: true
 ---
 
-![PixSim Playground](https://github.com/henryhale/pixsim/raw/master/public/media/screenshot.png)
+![PixSim Playground](https://henryhale.github.io/pixsim/media/screenshot.png)
 
 PixSim, pixel simulator, is an educational LED Matrix simulation project that tends to explore how display systems like monitors/screens work. For instance, a desktop monitor or the screen on a digital watch is composed of a grid of small LEDs representing pixels. That's the basis of this project; taking you through the origins/evolution from just a grid of pixels to modern fields/usage like graphics and text rendering.
 
