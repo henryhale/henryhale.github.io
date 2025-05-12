@@ -32,7 +32,7 @@ export const PROJECTS: Metadata = {
 export const SOCIALS: Socials = [
 	{
 		NAME: "email",
-		HREF: "mailto:devhenryhale.proton.me",
+		HREF: "mailto:hello@henryhale.dev",
 	},
 	{
 		NAME: "twitter-x",
