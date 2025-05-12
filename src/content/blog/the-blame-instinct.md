@@ -17,7 +17,6 @@ Consider these common reactions:
 
 - “Why should I learn calculus or history? It’s useless.” — yet we rely on technologies and systems built on such knowledge.
 
-
 While there may be some truth to these assumptions—causality is complex, and small changes can ripple into larger effects (as seen in concepts like the [butterfly](https://en.wikipedia.org/wiki/Butterfly_effect) or [domino](https://en.wikipedia.org/wiki/Domino_effect) effect)—they often reflect a limited understanding of the situation.
 
 This raises an important question: How would the outcome change if circumstances were different? What if the current president weren’t in office? What if someone were born into a different family, location, or economic class? Would the result truly be different, or are there deeper underlying factors at play?

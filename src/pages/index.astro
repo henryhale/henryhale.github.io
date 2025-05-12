@@ -36,87 +36,92 @@ const projects = (await getCollection("projects"))
 						As a developer, I am driven by a passion for
 						understanding the fundamentals of technology and
 						crafting innovative solutions.
-					<p class="animate">
-						Oftentimes, I work on
-						problems I face during the course of my daily life; subtle or
-						interesting. While not programming, I'm watching movies
-						and past tech events. I enjoy mobile games ([payback²](https://play.google.com/store/apps/details?id=net.apex_designs.payback2) and [ninja warrior](https://play.google.com/store/apps/details?id=com.tohsoft.arashi.ninja.shadow)), chocolate cake, teaching, tours and travel. 
-					</p>
-					<p class="animate">
-						Through this website, you'll find a glimpse into my
-						world.
-						<br />
-						<br />
-						Welcome to my corner of the internet.
-					</p>
-				</article>
-			</section>
-
-			<section class="animate space-y-6">
-				<div
-					class="flex flex-wrap gap-y-2 items-center justify-between"
-				>
-					<h5 class="font-semibold text-black dark:text-white">
-						Recent projects
-					</h5>
-					<Link href="/projects"> See all projects </Link>
-				</div>
-				<ul class="flex flex-col gap-4">
-					{
-						projects.map((project) => (
-							<li>
-								<ArrowCard entry={project} />
-							</li>
-						))
-					}
-				</ul>
-			</section>
-
-			<section class="animate space-y-6">
-				<div
-					class="flex flex-wrap gap-y-2 items-center justify-between"
-				>
-					<h5 class="font-semibold text-black dark:text-white">
-						Latest posts
-					</h5>
-					<Link href="/blog"> See all posts </Link>
-				</div>
-				<ul class="flex flex-col gap-4">
-					{
-						blog.map((post) => (
-							<li>
-								<ArrowCard entry={post} />
-							</li>
-						))
-					}
-				</ul>
-			</section>
-
-			<section class="animate space-y-4">
-				<h5 class="font-semibold text-black dark:text-white">
-					Let's Connect
-				</h5>
-				<article>
-					<p>
-						If you want to get in touch with me about something or
-						just to say hi, reach out on social media.
+						<p class="animate">
+							Oftentimes, I work on problems I face during the
+							course of my daily life; subtle or interesting.
+							While not programming, I'm watching movies and past
+							tech events. I enjoy mobile games
+							([payback²](https://play.google.com/store/apps/details?id=net.apex_designs.payback2)
+							and [ninja
+							warrior](https://play.google.com/store/apps/details?id=com.tohsoft.arashi.ninja.shadow)),
+							chocolate cake, teaching, tours and travel.
+						</p>
+						<p class="animate">
+							Through this website, you'll find a glimpse into my
+							world.
+							<br />
+							<br />
+							Welcome to my corner of the internet.
+						</p>
 					</p>
 				</article>
-				<ul class="flex flex-wrap gap-2">
-					{
-						SOCIALS.map((SOCIAL) => (
-							<li class="flex gap-x-2 text-nowrap">
-								<Link
-									href={SOCIAL.HREF}
-									external
-									aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
-								>
-									{SOCIAL.NAME}
-								</Link>
-							</li>
-						))
-					}
-				</ul>
+
+				<section class="animate space-y-6">
+					<div
+						class="flex flex-wrap gap-y-2 items-center justify-between"
+					>
+						<h5 class="font-semibold text-black dark:text-white">
+							Recent projects
+						</h5>
+						<Link href="/projects"> See all projects </Link>
+					</div>
+					<ul class="flex flex-col gap-4">
+						{
+							projects.map((project) => (
+								<li>
+									<ArrowCard entry={project} />
+								</li>
+							))
+						}
+					</ul>
+				</section>
+
+				<section class="animate space-y-6">
+					<div
+						class="flex flex-wrap gap-y-2 items-center justify-between"
+					>
+						<h5 class="font-semibold text-black dark:text-white">
+							Latest posts
+						</h5>
+						<Link href="/blog"> See all posts </Link>
+					</div>
+					<ul class="flex flex-col gap-4">
+						{
+							blog.map((post) => (
+								<li>
+									<ArrowCard entry={post} />
+								</li>
+							))
+						}
+					</ul>
+				</section>
+
+				<section class="animate space-y-4">
+					<h5 class="font-semibold text-black dark:text-white">
+						Let's Connect
+					</h5>
+					<article>
+						<p>
+							If you want to get in touch with me about something
+							or just to say hi, reach out on social media.
+						</p>
+					</article>
+					<ul class="flex flex-wrap gap-2">
+						{
+							SOCIALS.map((SOCIAL) => (
+								<li class="flex gap-x-2 text-nowrap">
+									<Link
+										href={SOCIAL.HREF}
+										external
+										aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+									>
+										{SOCIAL.NAME}
+									</Link>
+								</li>
+							))
+						}
+					</ul>
+				</section>
 			</section>
 		</div>
 	</Container>

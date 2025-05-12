@@ -15,7 +15,4 @@ Notes:
 - Configure code-server with ~/.local/config/code-server/config.yaml
 - Use library/school/internet cafe computers with network access via wifi or usb
 - TUI: install micro text editor
-- Hardware: buy mobile phone stand, wireless mouse and keyboard combo.   
-
-
-
+- Hardware: buy mobile phone stand, wireless mouse and keyboard combo.

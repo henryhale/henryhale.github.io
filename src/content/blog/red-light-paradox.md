@@ -15,7 +15,7 @@ are composed of parts that don't resemble the whole they create.
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Misc_pollen.jpg/440px-Misc_pollen.jpg)
 _Image of pollen grains taken on a SEM shows the characteristic depth of field of SEM micrographs: [view source](https://en.wikipedia.org/wiki/Scanning_electron_microscope?wprov=sfla1)_
 
- The rest of
+The rest of
 this post tends to set common grounds first as well as attempt to answer the
 question: `is water wet?` using the red light paradox.
 
