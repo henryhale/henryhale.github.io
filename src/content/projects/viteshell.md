@@ -4,7 +4,7 @@ description: "✴️ A minimalistic shell implementation written in TypeScript."
 date: "Mar 31 2024"
 demoURL: "https://henryhale.github.io/vix"
 repoURL: "https://github.com/henryhale/viteshell"
-logURL: "https://github.com/henryhale/viteshell/raw/master/media/logo.jpg"
+logoURL: "https://github.com/henryhale/viteshell/raw/master/media/logo.jpg"
 featured: true
 ---
 

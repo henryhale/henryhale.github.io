@@ -70,7 +70,7 @@ const { Content } = await render(post)
 				post.prev && (
 					<BackToPrev href={post.prev.id}>
 						<div class="text-sm mb-2">PREV</div>
-						<div class="text-xs">{post.prev.data.title}</div>
+						<div>{post.prev.data.title}</div>
 					</BackToPrev>
 				)
 			}
@@ -78,8 +78,8 @@ const { Content } = await render(post)
 			{
 				post.next && (
 					<BackToPrev right href={post.next.id}>
-						<div class="text-xs mb-2">NEXT</div>
-						<div class="text-xs">{post.next.data.title}</div>
+						<div class="text-sm mb-2">NEXT</div>
+						<div>{post.next.data.title}</div>
 					</BackToPrev>
 				)
 			}
