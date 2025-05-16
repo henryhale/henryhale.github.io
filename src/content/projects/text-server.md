@@ -2,7 +2,8 @@
 title: "Text Server"
 description: "🗒 Like code-server but delivering a WYSIWYG editor and file explorer only."
 date: "May 07 2025"
-demoURL: "https://henryhale.github.io/text-server/"
+logoURL: "https://github.com/henryhale/text-server/raw/master/web/public/favicon.svg"
+demoURL: ""
 repoURL: "https://github.com/henryhale/text-server/"
 featured: true
 ---

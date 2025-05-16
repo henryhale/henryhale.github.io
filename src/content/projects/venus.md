@@ -4,6 +4,7 @@ description: "🦠 Predator-prey simulation with predefined behavior."
 date: "Mar 31 2024"
 demoURL: "https://henryhale.github.io/venus/"
 repoURL: "https://github.com/henryhale/venus"
+logoURL: "https://github.com/henryhale/venus/raw/master/public/favicon.png"
 ---
 
 ![Venus](https://github.com/henryhale/venus/raw/master/screenshot.png)

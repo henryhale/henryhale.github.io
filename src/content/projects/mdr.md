@@ -4,6 +4,7 @@ description: "🧩 A pattern recognition game based on the severance series."
 date: "Apr 18 2025"
 demoURL: "https://henryhale.github.io/mdr/"
 repoURL: "https://github.com/henryhale/mdr/"
+logoURL: "https://github.com/henryhale/mdr/raw/master/public/img/lumon.svg"
 featured: true
 ---
 

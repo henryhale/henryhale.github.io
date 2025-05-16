@@ -4,6 +4,7 @@ description: "👾 A pixel-based led matrix simulator"
 date: "Dec 27 2024"
 demoURL: "https://henryhale.github.io/pixsim/"
 repoURL: "https://github.com/henryhale/pixsim"
+logoURL: "https://github.com/henryhale/text-server/raw/master/docs/public/favicon.svg"
 featured: true
 ---
 
