@@ -18,7 +18,10 @@ export async function getStaticPaths() {
 	}))
 }
 
-type Props = CollectionEntry<"blog">
+type Props = CollectionEntry<"blog"> & {
+	next: CollectionEntry<"blog">
+	prev: CollectionEntry<"blog">
+}
 
 const post = Astro.props
 
