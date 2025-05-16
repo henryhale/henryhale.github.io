@@ -12,11 +12,12 @@ export async function getStaticPaths() {
 	const posts = (await getCollection("blog"))
 		.filter((post) => !post.data.draft)
 		.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-	return posts.map((post) => ({
+	return posts.map((post, i) => ({
 		params: { id: post.id },
-		props: post,
+		props: { ...post, next: posts[i + 1], prev: posts[i - 1] },
 	}))
 }
+
 type Props = CollectionEntry<"blog">
 
 const post = Astro.props
@@ -60,6 +61,25 @@ const { Content } = await render(post)
 					href={SOCIALS[0].HREF}>email me</Link
 				> with your thoughts.
 			</div>
+		</div>
+		<div class="animate mt-10 flex flex-col sm:flex-row items-start gap-2">
+			{
+				post.prev && (
+					<BackToPrev href={post.prev.id}>
+						<div class="text-sm mb-2">PREV</div>
+						<div class="text-xs">{post.prev.data.title}</div>
+					</BackToPrev>
+				)
+			}
+			<div class="sm:flex-grow hidden sm:block"></div>
+			{
+				post.next && (
+					<BackToPrev right href={post.next.id}>
+						<div class="text-xs mb-2">NEXT</div>
+						<div class="text-xs">{post.next.data.title}</div>
+					</BackToPrev>
+				)
+			}
 		</div>
 	</Container>
 </PageLayout>
