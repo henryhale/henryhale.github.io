@@ -2,16 +2,18 @@
 type Props = {
 	href: string
 	right?: boolean
+	prev?: boolean
 }
 
-const { href, right } = Astro.props
+const { href, right, prev = false } = Astro.props
 ---
 
 <a
 	href={href}
 	class:list={[
 		{ "flex-row-reverse": right },
-		"relative group w-fit max-w-[50%] flex items-center gap-1.5 px-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out",
+		prev ? "items-center w-fit" : "items-start w-full sm:max-w-[50%]",
+		"relative group flex gap-1.5 px-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out",
 	]}
 >
 	<svg
@@ -34,7 +36,7 @@ const { href, right } = Astro.props
 			class="translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
 		></polyline>
 	</svg>
-	<div class="text-sm">
+	<div class="flex-grow text-sm">
 		<slot />
 	</div>
 </a>

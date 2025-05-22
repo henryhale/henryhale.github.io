@@ -4,7 +4,7 @@ import PageLayout from "@layouts/PageLayout.astro"
 import Container from "@components/Container.astro"
 import FormattedDate from "@components/FormattedDate.astro"
 import { readingTime } from "@lib/utils"
-import BackToPrev from "@components/BackToPrev.astro"
+import ArrowLink from "@components/ArrowLink.astro"
 import { SOCIALS } from "@consts"
 import Link from "@components/Link.astro"
 
@@ -31,7 +31,7 @@ const { Content } = await render(post)
 <PageLayout title={post.data.title} description={post.data.description}>
 	<Container>
 		<div class="animate">
-			<BackToPrev href="/blog"> Back to blog </BackToPrev>
+			<ArrowLink href="/blog" prev={true}> Back to blog </ArrowLink>
 		</div>
 		<div class="space-y-1 my-10">
 			<div class="animate flex items-center gap-1.5">
@@ -65,22 +65,22 @@ const { Content } = await render(post)
 				> with your thoughts.
 			</div>
 		</div>
-		<div class="animate mt-10 flex flex-col sm:flex-row items-start gap-2">
+		<div class="animate mt-12 flex flex-col sm:flex-row items-start gap-2">
 			{
 				post.prev && (
-					<BackToPrev href={post.prev.id}>
-						<div class="text-sm mb-2">PREV</div>
+					<ArrowLink href={`/${post.prev.collection}/${post.prev.id}`}>
+						<div class="text-xs mb-2 font-semibold">PREV</div>
 						<div>{post.prev.data.title}</div>
-					</BackToPrev>
+					</ArrowLink>
 				)
 			}
 			<div class="sm:flex-grow hidden sm:block"></div>
 			{
 				post.next && (
-					<BackToPrev right href={post.next.id}>
-						<div class="text-sm mb-2">NEXT</div>
-						<div>{post.next.data.title}</div>
-					</BackToPrev>
+					<ArrowLink right href={`/${post.next.collection}/${post.next.id}`}>
+						<div class="text-xs mb-2 font-semibold sm:text-right">NEXT</div>
+						<div class="sm:text-right">{post.next.data.title}</div>
+					</ArrowLink>
 				)
 			}
 		</div>
