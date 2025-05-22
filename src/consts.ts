@@ -29,6 +29,11 @@ export const PROJECTS: Metadata = {
 		"A collection of my projects, with links to repositories and demos.",
 }
 
+export const CONTACT: Metadata = {
+	TITLE: "Contact",
+	DESCRIPTION: "Say Hello. I'd love to hear from you.",
+}
+
 export const SOCIALS: Socials = [
 	{
 		NAME: "email",

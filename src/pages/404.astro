@@ -1,7 +1,7 @@
 ---
 import Container from "@components/Container.astro"
 import PageLayout from "@layouts/PageLayout.astro"
-import BackToPrev from "@components/BackToPrev.astro"
+import ArrowLink from "@components/ArrowLink.astro"
 import { HOME } from "@consts"
 ---
 
@@ -16,7 +16,7 @@ import { HOME } from "@consts"
 					:( Sorry, the page you requested for does not exist.
 				</p>
 				<div class="animate">
-					<BackToPrev href="/"> Back to Home </BackToPrev>
+					<ArrowLink href="/"> Back to Home </ArrowLink>
 				</div>
 			</article>
 		</section>

@@ -1,0 +1,39 @@
+---
+import PageLayout from "@layouts/PageLayout.astro"
+import Container from "@components/Container.astro"
+import Link from "@components/Link.astro"
+import { dateRange } from "@lib/utils"
+import { CONTACT, SITE, SOCIALS } from "@consts"
+---
+
+<PageLayout title={CONTACT.TITLE} description={CONTACT.DESCRIPTION}>
+	<Container>
+		<div class="space-y-10 text-center flex flex-col items-center">
+			<div class="animate">
+				<img
+					class="w-24 h-24 rounded-md"
+					src={SITE.IMAGE}
+					alt={SITE.NAME}
+				/>
+			</div>
+			<div class="animate font-semibold text-black dark:text-white">
+				Say Hello.
+			</div>
+			<ul class="animate flex flex-wrap gap-2">
+				{
+					SOCIALS.map((SOCIAL) => (
+						<li class="flex gap-x-2 text-nowrap">
+							<Link
+								href={SOCIAL.HREF}
+								external
+								aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+							>
+								{SOCIAL.NAME}
+							</Link>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</Container>
+</PageLayout>

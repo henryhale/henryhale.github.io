@@ -68,7 +68,9 @@ const { Content } = await render(post)
 		<div class="animate mt-12 flex flex-col sm:flex-row items-start gap-2">
 			{
 				post.prev && (
-					<ArrowLink href={`/${post.prev.collection}/${post.prev.id}`}>
+					<ArrowLink
+						href={`/${post.prev.collection}/${post.prev.id}`}
+					>
 						<div class="text-xs mb-2 font-semibold">PREV</div>
 						<div>{post.prev.data.title}</div>
 					</ArrowLink>
@@ -77,8 +79,13 @@ const { Content } = await render(post)
 			<div class="sm:flex-grow hidden sm:block"></div>
 			{
 				post.next && (
-					<ArrowLink right href={`/${post.next.collection}/${post.next.id}`}>
-						<div class="text-xs mb-2 font-semibold sm:text-right">NEXT</div>
+					<ArrowLink
+						right
+						href={`/${post.next.collection}/${post.next.id}`}
+					>
+						<div class="text-xs mb-2 font-semibold sm:text-right">
+							NEXT
+						</div>
 						<div class="sm:text-right">{post.next.data.title}</div>
 					</ArrowLink>
 				)
