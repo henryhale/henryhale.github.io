@@ -57,6 +57,13 @@ const { title, description } = Astro.props
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content="https://henryhale.dev/ogimage.png" />
 
+<!-- Cloudflare Web Analytics -->
+<script
+	defer
+	src="https://static.cloudflareinsights.com/beacon.min.js"
+	data-cf-beacon='{"token": "2025a9bfcc1e4744817bdeb9bc4a6eb4"}'
+></script><!-- End Cloudflare Web Analytics -->
+
 <ClientRouter />
 
 <script is:inline>
