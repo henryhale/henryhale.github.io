@@ -2,12 +2,13 @@
 import PageLayout from "@layouts/PageLayout.astro"
 import Container from "@components/Container.astro"
 import Link from "@components/Link.astro"
+import FormInput from "@components/FormInput.astro"
 import { CONTACT, SITE, SOCIALS } from "@consts"
 ---
 
 <PageLayout title={CONTACT.TITLE} description={CONTACT.DESCRIPTION}>
 	<Container>
-		<div class="space-y-10 text-center flex flex-col items-center">
+		<div class="space-y-8 flex flex-col items-center">
 			<div class="animate">
 				<img
 					class="w-24 h-24 rounded-md"
@@ -15,10 +16,10 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 					alt={SITE.NAME}
 				/>
 			</div>
-			<div class="animate font-semibold text-black dark:text-white">
-				Say Hello.
+			<div class="animate font-semibold text-black dark:text-white text-center">
+				Let's Connect - I'd love to hear from you.
 			</div>
-			<ul class="animate flex flex-wrap gap-2">
+			<ul class="animate flex flex-wrap gap-2 text-center">
 				{
 					SOCIALS.map((SOCIAL) => (
 						<li class="flex gap-x-2 text-nowrap">
@@ -33,6 +34,16 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 					))
 				}
 			</ul>
+			<form method="post" action="https://formbold.com/s/3n55dd" class="animate px-4 pb-4 container max-w-sm mx-auto">
+				<div class="animate font-semibold text-black dark:text-white text-center mb-4">Contact Me.</div>
+				<FormInput label="Full Name" type="text" name="fullname" />
+				<FormInput label="Email Address" type="email" name="email" />
+				<FormInput label="Subject" type="text" name="subject" />
+				<FormInput label="Message" type="textarea" name="message" />
+				<button type="submit" class="block w-full mt-4 px-2 py-1 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+					<span>Send Message</span>
+				</button>
+			</form>
 		</div>
 	</Container>
 </PageLayout>

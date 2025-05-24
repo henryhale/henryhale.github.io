@@ -5,8 +5,8 @@ import Container from "@components/Container.astro"
 import FormattedDate from "@components/FormattedDate.astro"
 import { readingTime } from "@lib/utils"
 import ArrowLink from "@components/ArrowLink.astro"
-import { SOCIALS } from "@consts"
 import Link from "@components/Link.astro"
+import Feedback from "@components/Feedback.astro"
 
 export async function getStaticPaths() {
 	const posts = (await getCollection("blog"))
@@ -53,18 +53,7 @@ const { Content } = await render(post)
 		<article class="animate">
 			<Content />
 		</article>
-		<div class="animate mt-10 space-y-10">
-			<div
-				class="w-1/2 mx-auto border border-black/15 dark:border-white/30"
-			>
-			</div>
-			<div>
-				💭 I'd love to hear your feedback on this post! Feel free to <Link
-					external
-					href={SOCIALS[0].HREF}>email me</Link
-				> with your thoughts.
-			</div>
-		</div>
+		<Feedback item="post" />
 		<div class="animate mt-12 flex flex-col sm:flex-row items-stretch gap-2">
 			{
 				post.prev && (

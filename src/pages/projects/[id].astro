@@ -6,6 +6,7 @@ import FormattedDate from "@components/FormattedDate.astro"
 import { readingTime } from "@lib/utils"
 import ArrowLink from "@components/ArrowLink.astro"
 import Link from "@components/Link.astro"
+import Feedback from "@components/Feedback.astro"
 
 export async function getStaticPaths() {
 	const projects = (await getCollection("projects"))
@@ -109,6 +110,7 @@ const { Content } = await render(project)
 		<article class="animate">
 			<Content />
 		</article>
+		<Feedback item="project" />
 		<div class="animate mt-10 flex flex-col sm:flex-row items-stretch gap-2">
 			{
 				project.prev && (
