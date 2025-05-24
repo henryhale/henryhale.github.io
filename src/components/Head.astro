@@ -19,6 +19,8 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const { title, description } = Astro.props
+
+const IS_DEV = import.meta.env.DEV
 ---
 
 <!-- Global Metadata -->
@@ -56,6 +58,19 @@ const { title, description } = Astro.props
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content="https://henryhale.dev/ogimage.png" />
+
+<!-- Cloudflare Web Analytics -->
+{
+	IS_DEV && (
+		<script
+			is:inline
+			defer
+			src="https://static.cloudflareinsights.com/beacon.min.js"
+			data-cf-beacon='{"token": "fea018b477c74830aea93f3da1160683"}'
+		/>
+	)
+}
+<!-- End Cloudflare Web Analytics -->
 
 <ClientRouter />
 
