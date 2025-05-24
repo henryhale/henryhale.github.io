@@ -59,15 +59,18 @@ const isDev = import.meta.env.DEV
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content="https://henryhale.dev/ogimage.png" />
 
-{!isDev && (
-<!-- Cloudflare Web Analytics -->
-<script
-	is:inline
-	defer
-	src="https://static.cloudflareinsights.com/beacon.min.js"
-	data-cf-beacon='{"token": "2025a9bfcc1e4744817bdeb9bc4a6eb4"}'></script>
-<!-- End Cloudflare Web Analytics -->
-)}
+<!-- Web Analytics -->
+{
+	!isDev && (
+		<script
+			is:inline
+			defer
+			src="https://static.cloudflareinsights.com/beacon.min.js"
+			data-cf-beacon='{"token": "2025a9bfcc1e4744817bdeb9bc4a6eb4"}'
+		/>
+	)
+}
+<!-- End Web Analytics -->
 <ClientRouter />
 
 <script is:inline>

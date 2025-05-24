@@ -54,7 +54,9 @@ const { Content } = await render(post)
 			<Content />
 		</article>
 		<Feedback item="post" />
-		<div class="animate mt-12 flex flex-col sm:flex-row items-stretch gap-2">
+		<div
+			class="animate mt-12 flex flex-col sm:flex-row items-stretch gap-2"
+		>
 			{
 				post.prev && (
 					<ArrowLink
@@ -72,9 +74,7 @@ const { Content } = await render(post)
 						right
 						href={`/${post.next.collection}/${post.next.id}`}
 					>
-						<div class="text-xs mb-2 font-semibold">
-							NEXT
-						</div>
+						<div class="text-xs mb-2 font-semibold">NEXT</div>
 						<div>{post.next.data.title}</div>
 					</ArrowLink>
 				)

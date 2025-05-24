@@ -16,7 +16,9 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 					alt={SITE.NAME}
 				/>
 			</div>
-			<div class="animate font-semibold text-black dark:text-white text-center">
+			<div
+				class="animate font-semibold text-black dark:text-white text-center"
+			>
 				Let's Connect - I'd love to hear from you.
 			</div>
 			<ul class="animate flex flex-wrap gap-2 text-center">
@@ -34,13 +36,24 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 					))
 				}
 			</ul>
-			<form method="post" action="https://formbold.com/s/3n55dd" class="animate px-4 pb-4 container max-w-sm mx-auto">
-				<div class="animate font-semibold text-black dark:text-white text-center mb-4">Contact Me.</div>
+			<form
+				method="post"
+				action="https://formbold.com/s/3n55dd"
+				class="animate px-4 pb-4 container max-w-sm mx-auto"
+			>
+				<div
+					class="animate font-semibold text-black dark:text-white text-center mb-4"
+				>
+					Contact Me.
+				</div>
 				<FormInput label="Full Name" type="text" name="fullname" />
 				<FormInput label="Email Address" type="email" name="email" />
 				<FormInput label="Subject" type="text" name="subject" />
 				<FormInput label="Message" type="textarea" name="message" />
-				<button type="submit" class="block w-full mt-4 px-2 py-1 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+				<button
+					type="submit"
+					class="block w-full mt-4 px-2 py-1 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+				>
 					<span>Send Message</span>
 				</button>
 			</form>

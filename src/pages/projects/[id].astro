@@ -111,10 +111,14 @@ const { Content } = await render(project)
 			<Content />
 		</article>
 		<Feedback item="project" />
-		<div class="animate mt-10 flex flex-col sm:flex-row items-stretch gap-2">
+		<div
+			class="animate mt-10 flex flex-col sm:flex-row items-stretch gap-2"
+		>
 			{
 				project.prev && (
-					<ArrowLink href={`/${project.prev.collection}/${project.prev.id}`}>
+					<ArrowLink
+						href={`/${project.prev.collection}/${project.prev.id}`}
+					>
 						<div class="text-xs mb-2 font-semibold">PREV</div>
 						<div>Project: {project.prev.data.title}</div>
 					</ArrowLink>
@@ -123,7 +127,10 @@ const { Content } = await render(project)
 			<div class="sm:flex-grow hidden sm:block"></div>
 			{
 				project.next && (
-					<ArrowLink right href={`/${project.next.collection}/${project.next.id}`}>
+					<ArrowLink
+						right
+						href={`/${project.next.collection}/${project.next.id}`}
+					>
 						<div class="text-xs mb-2 font-semibold">NEXT</div>
 						<div>Project: {project.next.data.title}</div>
 					</ArrowLink>
