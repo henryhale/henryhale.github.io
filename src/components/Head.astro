@@ -20,7 +20,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const { title, description } = Astro.props
 
-const IS_DEV = import.meta.env.DEV
+const IS_PROD = import.meta.env.PROD
 ---
 
 <!-- Global Metadata -->
@@ -61,7 +61,7 @@ const IS_DEV = import.meta.env.DEV
 
 <!-- Cloudflare Web Analytics -->
 {
-	IS_DEV && (
+	IS_PROD && (
 		<script
 			is:inline
 			defer
