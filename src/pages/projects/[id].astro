@@ -109,7 +109,7 @@ const { Content } = await render(project)
 		<article class="animate">
 			<Content />
 		</article>
-		<div class="animate mt-10 flex flex-col sm:flex-row items-start gap-2">
+		<div class="animate mt-10 flex flex-col sm:flex-row items-stretch gap-2">
 			{
 				project.prev && (
 					<ArrowLink href={`/${project.prev.collection}/${project.prev.id}`}>
