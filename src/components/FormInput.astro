@@ -9,18 +9,18 @@ const { type = "text", label, name } = Astro.props
 ---
 
 <label for={name} class="mt-2.5 block w-full">
-	<span class="text-sm font-medium text-slate-700"> {label} </span>
+	<span class="text-sm font-medium"> {label} </span>
 	{
 		type != "textarea" ? (
 			<input
 				type={type}
 				id={name}
-				class="mt-0.5 w-full rounded border border-black/15 dark:border-white/20 shadow-sm sm:text-sm px-2 py-1"
+				class="mt-0.5 w-full rounded border border-black/15 dark:border-white/20 shadow-sm sm:text-sm px-2 py-1 bg-transparent"
 			/>
 		) : (
 			<textarea
 				id={name}
-				class="mt-0.5 w-full rounded border border-black/15 dark:border-white/20 shadow-sm sm:text-sm px-2 py-1 resize-vertical h-[75px]"
+				class="mt-0.5 w-full rounded border border-black/15 dark:border-white/20 shadow-sm sm:text-sm px-2 py-1 bg-transparent resize-vertical h-[75px]"
 			/>
 		)
 	}
