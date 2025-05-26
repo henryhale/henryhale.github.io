@@ -4,7 +4,7 @@ import Container from "@components/Container.astro"
 import PageLayout from "@layouts/PageLayout.astro"
 import ArrowCard from "@components/ArrowCard.astro"
 import Link from "@components/Link.astro"
-import { SITE, HOME, SOCIALS } from "@consts"
+import { SITE, HOME } from "@consts"
 
 const blog = (await getCollection("blog"))
 	.filter((post) => !post.data.draft)
@@ -109,19 +109,12 @@ const projects = (await getCollection("projects"))
 					</p>
 				</article>
 				<ul class="flex flex-wrap gap-2">
-					{
-						SOCIALS.map((SOCIAL) => (
-							<li class="flex gap-x-2 text-nowrap">
-								<Link
-									href={SOCIAL.HREF}
-									external
-									aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
-								>
-									{SOCIAL.NAME}
-								</Link>
-							</li>
-						))
-					}
+					<li class="flex items-center gap-x-2 text-nowrap">
+						<span>➡️</span>
+						<Link href="/contact" aria-label="Get in touch">
+							Get in Touch
+						</Link>
+					</li>
 				</ul>
 			</section>
 		</div>
