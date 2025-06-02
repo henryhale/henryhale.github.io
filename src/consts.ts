@@ -1,4 +1,4 @@
-import type { Site, Metadata, Socials } from "@types"
+import type { Site, Metadata, Socials, Services } from "@types"
 
 export const SITE: Site = {
 	IMAGE: "https://github.com/henryhale.png",
@@ -46,5 +46,18 @@ export const SOCIALS: Socials = [
 	{
 		NAME: "github",
 		HREF: "https://github.com/henryhale",
+	},
+]
+
+export const SERVICES: Services = [
+	{
+		ICON: "code",
+		TITLE: "Software Development",
+		TEXT: "I design and build efficient, maintainable software systems - from low-level utilities to full-stack web applications. I'm open to freelance or contract work.",
+	},
+	{
+		ICON: "branch",
+		TITLE: "Reverse Engineering",
+		TEXT: "I explore how existing technologies work, often rebuilding or improving them. Let's connect if you're working on tech recreations, emulators, or similar projects.",
 	},
 ]

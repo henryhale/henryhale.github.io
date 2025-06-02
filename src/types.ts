@@ -15,3 +15,9 @@ export type Socials = {
 	NAME: string
 	HREF: string
 }[]
+
+export type Services = {
+	ICON: string
+	TITLE: string
+	TEXT: string
+}[]
