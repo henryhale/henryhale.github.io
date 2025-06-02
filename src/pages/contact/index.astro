@@ -2,6 +2,7 @@
 import PageLayout from "@layouts/PageLayout.astro"
 import Container from "@components/Container.astro"
 import Link from "@components/Link.astro"
+import Icon from "@components/Icon.astro"
 import FormInput from "@components/FormInput.astro"
 import { CONTACT, SITE, SOCIALS } from "@consts"
 ---
@@ -21,7 +22,7 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 			>
 				Let's Connect - I'd love to hear from you.
 			</div>
-			<ul class="animate flex flex-wrap gap-2 text-center">
+			<ul class="animate flex flex-wrap gap-4 text-center">
 				{
 					SOCIALS.map((SOCIAL) => (
 						<li class="flex gap-x-2 text-nowrap">
@@ -30,7 +31,13 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 								external
 								aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
 							>
-								{SOCIAL.NAME}
+								<div class="flex flex-col items-center gap-2">
+									<Icon
+										name={SOCIAL.ICON}
+										class="size-6 fill-current"
+									/>
+									<span>{SOCIAL.NAME}</span>
+								</div>
 							</Link>
 						</li>
 					))

@@ -36,14 +36,17 @@ export const CONTACT: Metadata = {
 
 export const SOCIALS: Socials = [
 	{
+		ICON: "envelope",
 		NAME: "email",
 		HREF: "mailto:hello@henryhale.dev",
 	},
 	{
+		ICON: "twitter",
 		NAME: "twitter-x",
 		HREF: "https://twitter.com/devhenryhale",
 	},
 	{
+		ICON: "github",
 		NAME: "github",
 		HREF: "https://github.com/henryhale",
 	},
