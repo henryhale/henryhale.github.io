@@ -4,7 +4,9 @@ import Icon from "./Icon.astro"
 const { icon, title, text } = Astro.props
 ---
 
-<div class="hover:text-black dark:hover:text-white transition-colors">
+<div
+	class="hover:text-black dark:hover:text-white transition-colors cursor-default"
+>
 	<Icon name={icon} class="shrink-0 size-9" />
 	<div class="mt-5">
 		<h3 class="font-semibold">
