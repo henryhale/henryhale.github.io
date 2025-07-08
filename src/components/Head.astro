@@ -20,6 +20,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const { title, description } = Astro.props
 
+const ogimage = new URL("/ogimage.png", Astro.site)
+
 const IS_PROD = import.meta.env.PROD
 ---
 
@@ -50,14 +52,14 @@ const IS_PROD = import.meta.env.PROD
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="https://henryhale.dev/ogimage.png" />
+<meta property="og:image" content={ogimage} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://henryhale.dev/ogimage.png" />
+<meta property="twitter:image" content={ogimage} />
 
 <!-- Cloudflare Web Analytics -->
 {
