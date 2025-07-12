@@ -12,7 +12,7 @@ const { href, right, prev = false } = Astro.props
 	href={href}
 	class:list={[
 		{ "flex-row-reverse text-right": right },
-		{ prev ? "w-fit" : ""},
+		{ "w-fit": prev },
 		"relative group flex items-center gap-3 px-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out",
 	]}
 >

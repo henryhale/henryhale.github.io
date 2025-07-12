@@ -13,7 +13,11 @@ export async function getStaticPaths() {
 		.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	return posts.map((post, i) => ({
 		params: { id: post.id },
-		props: { ...post, next: posts[(i + 1) % posts.length], prev: posts[(i - 1 + posts.length) % posts.length] },
+		props: {
+			...post,
+			next: posts[(i + 1) % posts.length],
+			prev: posts[(i - 1 + posts.length) % posts.length],
+		},
 	}))
 }
 
@@ -53,9 +57,7 @@ const { Content } = await render(post)
 			<Content />
 		</article>
 		<Feedback item="post" />
-		<div
-			class="animate mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4"
-		>
+		<div class="animate mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
 			{
 				post.prev && (
 					<ArrowLink
@@ -78,6 +80,5 @@ const { Content } = await render(post)
 				)
 			}
 		</div>
-		
 	</Container>
 </PageLayout>
