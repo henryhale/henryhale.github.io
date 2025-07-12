@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 		.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	return posts.map((post, i) => ({
 		params: { id: post.id },
-		props: { ...post, next: posts[i + 1], prev: posts[i - 1] },
+		props: { ...post, next: posts[(i + 1) % posts.length], prev: posts[(i - 1 + posts.length) % posts.length] },
 	}))
 }
 
@@ -54,30 +54,30 @@ const { Content } = await render(post)
 		</article>
 		<Feedback item="post" />
 		<div
-			class="animate mt-12 flex flex-col sm:flex-row items-stretch gap-2"
+			class="animate mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4"
 		>
 			{
 				post.prev && (
 					<ArrowLink
 						href={`/${post.prev.collection}/${post.prev.id}`}
 					>
-						<div class="text-xs mb-2 font-semibold">PREV</div>
+						<div class="text-sm mb-2 font-semibold">PREV</div>
 						<div>{post.prev.data.title}</div>
 					</ArrowLink>
 				)
 			}
-			<div class="sm:flex-grow hidden sm:block"></div>
 			{
 				post.next && (
 					<ArrowLink
 						right
 						href={`/${post.next.collection}/${post.next.id}`}
 					>
-						<div class="text-xs mb-2 font-semibold">NEXT</div>
+						<div class="text-sm mb-2 font-semibold">NEXT</div>
 						<div>{post.next.data.title}</div>
 					</ArrowLink>
 				)
 			}
 		</div>
+		
 	</Container>
 </PageLayout>
