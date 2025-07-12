@@ -12,8 +12,8 @@ const { href, right, prev = false } = Astro.props
 	href={href}
 	class:list={[
 		{ "flex-row-reverse text-right": right },
-		prev ? "items-center w-fit" : "items-start w-full sm:max-w-[50%]",
-		"relative group flex gap-1.5 px-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out",
+		{ prev ? "w-fit" : ""},
+		"relative group flex items-center gap-3 px-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out",
 	]}
 >
 	<svg
@@ -36,7 +36,7 @@ const { href, right, prev = false } = Astro.props
 			class="translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
 		></polyline>
 	</svg>
-	<div class="flex-grow text-sm">
+	<div>
 		<slot />
 	</div>
 </a>
