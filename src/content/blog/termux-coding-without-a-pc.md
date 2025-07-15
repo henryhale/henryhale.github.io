@@ -10,7 +10,7 @@ _Image from Androidguias - [view source](https://pt.androidguias.com/Como-rodar-
 
 ## Introduction
 
-Early this year, I have always been on the road without access to my personal computer.
+Early this year, I was always on the road without access to my personal computer.
 I found my self in a situation where I need to fix a bug in one of my projects; [PixSim](/projects/pixsim), a pixel-based led matrix simulator. Having used mobile development environments like Acode in my early programming days, I quickly ran to Google Play Store
 in search for a modern tool that supports Git. Well, that didn't work out well and so I googled how to develop/program software on an Android phone.
 
