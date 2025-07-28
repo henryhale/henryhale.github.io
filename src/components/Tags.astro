@@ -1,0 +1,78 @@
+---
+interface Props {
+	tags: string[]
+}
+
+const { tags } = Astro.props
+
+const list = ["All", ...tags]
+---
+
+<div class="flex flex-wrap gap-1">
+	{
+		list.map((tag: string) => (
+			<button
+				data-tag={tag}
+				class:list={[
+					tag === "All" && "active-tag",
+					"text-xs uppercase py-0.5 px-2 rounded",
+				]}
+			>
+				{tag}
+			</button>
+		))
+	}
+</div>
+
+<style>
+	button[data-tag]:not(.active-tag) {
+		@apply bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15;
+		@apply text-black/75 dark:text-white/75;
+		@apply border border-transparent;
+	}
+	button[data-tag].active-tag {
+		@apply font-semibold;
+		@apply bg-black/50 dark:bg-transparent;
+		@apply text-white dark:text-white;
+		@apply border border-black/15 dark:border-white/20;
+	}
+</style>
+
+<script is:inline>
+	function initTags() {
+		let activeTag
+		const tagElements = document.querySelectorAll("button[data-tag]")
+		tagElements.forEach(function (el) {
+			if (el.classList.contains("active-tag")) {
+				activeTag = el
+			}
+			el.addEventListener("click", function () {
+				if (el === activeTag || el.classList.contains("active-tag")) {
+					return
+				}
+				// clear active tag
+				if (activeTag) {
+					activeTag.classList.remove("active-tag")
+				}
+				// set this as active tag
+				el.classList.add("active-tag")
+				activeTag = el
+				// show/hide tagged content
+				document
+					.querySelectorAll("li[data-tagged]")
+					.forEach(function (li) {
+						if (
+							el.dataset.tag === "All" ||
+							li.dataset.tagged?.includes(el.dataset.tag)
+						) {
+							li.style.display = "block"
+						} else {
+							li.style.display = "none"
+						}
+					})
+			})
+		})
+	}
+	document.addEventListener("DOMContentLoaded", initTags)
+	document.addEventListener("astro:after-swap", initTags)
+</script>

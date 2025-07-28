@@ -6,6 +6,9 @@ demoURL: "https://xterminal.js.org/demo/"
 repoURL: "https://github.com/henryhale/xterminal"
 logoURL: "https://github.com/henryhale/xterminal/raw/master/assets/logo-rounded.png"
 featured: true
+tags:
+    - typescript
+    - npm-library
 ---
 
 ![XTerminal](https://github.com/henryhale/vix/raw/master/media/preview.png)

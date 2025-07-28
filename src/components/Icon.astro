@@ -2,6 +2,6 @@
 const { name, class: className } = Astro.props
 ---
 
-<svg class:list={[className, "fill-current"]}>
+<svg class={className}>
 	<use xlink:href={`/icons.svg#${name}`}></use>
 </svg>

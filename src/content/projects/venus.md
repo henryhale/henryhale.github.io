@@ -5,6 +5,10 @@ date: "Mar 31 2024"
 demoURL: "https://henryhale.github.io/venus/"
 repoURL: "https://github.com/henryhale/venus"
 logoURL: "https://github.com/henryhale/venus/raw/master/public/favicon.png"
+tags:
+    - web-dev
+    - simulation
+    - typescript
 ---
 
 ![Venus](https://github.com/henryhale/venus/raw/master/screenshot.png)

@@ -2,7 +2,10 @@
 title: "Termux: Coding Without A Personal Computer"
 description: "A deep dive into coding on your android device with Termux"
 date: "Jul 12 2025"
-draft: false
+tags:
+    - cs
+    - programming
+    - tutorial
 ---
 
 ![](https://androidguias.com/wp-content/uploads/2025/04/Termux.png)

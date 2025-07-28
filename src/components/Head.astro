@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css"
 import "@fontsource/inter/latin-400.css"
 import "@fontsource/inter/latin-600.css"
 import "@fontsource/lora/400.css"
@@ -83,25 +82,29 @@ const IS_PROD = import.meta.env.PROD
 		animate()
 
 		const backToTop = document.getElementById("back-to-top")
-		backToTop?.addEventListener("click", (event) => scrollToTop(event))
+		backToTop?.addEventListener("click", function (event) {
+			scrollToTop(event)
+		})
 
 		const backToPrev = document.getElementById("back-to-prev")
-		backToPrev?.addEventListener("click", () => window.history.back())
+		backToPrev?.addEventListener("click", function () {
+			window.history.back()
+		})
 
 		const lightThemeButton = document.getElementById("light-theme-button")
-		lightThemeButton?.addEventListener("click", () => {
+		lightThemeButton?.addEventListener("click", function () {
 			localStorage.setItem("theme", "light")
 			toggleTheme(false)
 		})
 
 		const darkThemeButton = document.getElementById("dark-theme-button")
-		darkThemeButton?.addEventListener("click", () => {
+		darkThemeButton?.addEventListener("click", function () {
 			localStorage.setItem("theme", "dark")
 			toggleTheme(true)
 		})
 
 		const systemThemeButton = document.getElementById("system-theme-button")
-		systemThemeButton?.addEventListener("click", () => {
+		systemThemeButton?.addEventListener("click", function () {
 			localStorage.setItem("theme", "system")
 			toggleTheme(
 				window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -110,7 +113,7 @@ const IS_PROD = import.meta.env.PROD
 
 		window
 			.matchMedia("(prefers-color-scheme: dark)")
-			.addEventListener("change", (event) => {
+			.addEventListener("change", function (event) {
 				if (localStorage.theme === "system") {
 					toggleTheme(event.matches)
 				}
@@ -122,8 +125,8 @@ const IS_PROD = import.meta.env.PROD
 	function animate() {
 		const animateElements = document.querySelectorAll(".animate")
 
-		animateElements.forEach((element, index) => {
-			setTimeout(() => {
+		animateElements.forEach(function (element, index) {
+			setTimeout(function () {
 				element.classList.add("show")
 			}, index * 150)
 		})
@@ -185,7 +188,7 @@ const IS_PROD = import.meta.env.PROD
 		}
 	}
 
-	document.addEventListener("DOMContentLoaded", () => init())
-	document.addEventListener("astro:after-swap", () => init())
+	document.addEventListener("DOMContentLoaded", init)
+	document.addEventListener("astro:after-swap", init)
 	preloadTheme()
 </script>

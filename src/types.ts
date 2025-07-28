@@ -6,7 +6,7 @@ export type Site = {
 	NUM_PROJECTS_ON_HOMEPAGE: number
 }
 
-export type Metadata = {
+export type Page = {
 	TITLE: string
 	DESCRIPTION: string
 }

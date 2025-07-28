@@ -5,6 +5,10 @@ date: "Mar 31 2024"
 demoURL: "https://henryhale.github.io/create-unit"
 repoURL: "https://github.com/henryhale/create-unit"
 logoURL: "https://github.com/henryhale/create-unit/raw/master/starter/src/public/favicon.png"
+tags:
+    - web-dev
+    - javascript
+    - npm-library
 ---
 
 ![Unit.js](https://github.com/henryhale/create-unit/raw/master/screenshot.png)

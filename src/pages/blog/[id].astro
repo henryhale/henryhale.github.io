@@ -1,84 +1,45 @@
 ---
-import { type CollectionEntry, getCollection, render } from "astro:content"
+import { type CollectionEntry, getCollection } from "astro:content"
 import PageLayout from "@layouts/PageLayout.astro"
-import Container from "@components/Container.astro"
-import FormattedDate from "@components/FormattedDate.astro"
-import { readingTime } from "@lib/utils"
-import ArrowLink from "@components/ArrowLink.astro"
-import Feedback from "@components/Feedback.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+import ArticleTopLayout from "@layouts/ArticleTopLayout.astro"
+import ArticleBottomLayout from "@layouts/ArticleBottomLayout.astro"
 
 export async function getStaticPaths() {
-	const posts = (await getCollection("blog"))
-		.filter((post) => !post.data.draft)
+	const list = (await getCollection("blog"))
+		.filter((entry) => !entry.data.draft)
 		.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-	return posts.map((post, i) => ({
-		params: { id: post.id },
+	return list.map((entry, i) => ({
+		params: { id: entry.id },
 		props: {
-			...post,
-			next: posts[(i + 1) % posts.length],
-			prev: posts[(i - 1 + posts.length) % posts.length],
+			entry,
+			next: list[(i + 1) % list.length],
+			prev: list[(i - 1 + list.length) % list.length],
 		},
 	}))
 }
 
-type Props = CollectionEntry<"blog"> & {
+type Props = {
+	entry: CollectionEntry<"blog">
 	next: CollectionEntry<"blog">
 	prev: CollectionEntry<"blog">
 }
 
-const post = Astro.props
+const { entry, next, prev } = Astro.props
 
-const { Content } = await render(post)
+const { title, description } = entry.data
 ---
 
-<PageLayout title={post.data.title} description={post.data.description}>
-	<Container>
+<PageLayout title={title} description={description}>
+	<TopLayout>
 		<div class="animate">
-			<ArrowLink href="/blog" prev={true}> Back to blog </ArrowLink>
+			<ArticleTopLayout entry={entry} />
 		</div>
-		<div class="space-y-1 my-10">
-			<div class="animate flex items-center gap-1.5">
-				<div class="font-base text-sm">
-					<FormattedDate date={post.data.date} />
-				</div>
-				&bull;
-				<div class="font-base text-sm">
-					{readingTime(post.body)}
-				</div>
-			</div>
-			<div
-				class="animate text-2xl font-semibold text-black dark:text-white"
-			>
-				{post.data.title}
-			</div>
-			<div class="animate text-sm">{post.data.description}</div>
+	</TopLayout>
+	<BottomLayout>
+		<div class="animate">
+			<ArticleBottomLayout entry={entry} next={next} prev={prev} />
 		</div>
-		<article class="animate">
-			<Content />
-		</article>
-		<Feedback item="post" />
-		<div class="animate mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
-			{
-				post.prev && (
-					<ArrowLink
-						href={`/${post.prev.collection}/${post.prev.id}`}
-					>
-						<div class="text-sm mb-2 font-semibold">PREV</div>
-						<div>{post.prev.data.title}</div>
-					</ArrowLink>
-				)
-			}
-			{
-				post.next && (
-					<ArrowLink
-						right
-						href={`/${post.next.collection}/${post.next.id}`}
-					>
-						<div class="text-sm mb-2 font-semibold">NEXT</div>
-						<div>{post.next.data.title}</div>
-					</ArrowLink>
-				)
-			}
-		</div>
-	</Container>
+	</BottomLayout>
 </PageLayout>

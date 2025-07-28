@@ -6,6 +6,9 @@ demoURL: "https://henryhale.github.io/mathflow-demo/"
 repoURL: "https://github.com/mathflowjs/mathflow/"
 logoURL: "https://mathflowjs.github.io/logo.svg"
 featured: true
+tags:
+    - typescript
+    - npm-library
 ---
 
 ![Mathflow](https://mathflowjs.github.io/logo.svg)

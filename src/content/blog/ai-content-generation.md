@@ -2,6 +2,9 @@
 title: "Content Generation Using AI: The Least Probable Outcome"
 description: "What are the chances that AI's growth stagnates in the future?"
 date: "Oct 14 2024"
+tags:
+    - ai
+    - case-study
 ---
 
 ![](https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601-cl.jpg)

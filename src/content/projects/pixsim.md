@@ -6,6 +6,9 @@ demoURL: "https://henryhale.github.io/pixsim/"
 repoURL: "https://github.com/henryhale/pixsim"
 logoURL: "https://henryhale.github.io/pixsim/favicon.svg"
 featured: true
+tags:
+    - exploratory
+    - simulation
 ---
 
 ![PixSim Playground](https://henryhale.github.io/pixsim/media/screenshot.png)

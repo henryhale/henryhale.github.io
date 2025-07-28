@@ -25,8 +25,18 @@ body {
 
 header {
 	@apply fixed top-0 left-0 right-0 z-50 py-5;
-	@apply bg-stone-100/75 dark:bg-stone-900/25;
-	@apply backdrop-blur-sm saturate-100;
+	@apply transition-all duration-300 ease-in-out;
+	@apply border-b saturate-100;
+}
+
+html:not(.scrolled) header {
+	@apply bg-transparent border-transparent;
+}
+
+html.scrolled header {
+	@apply bg-stone-100/75 dark:bg-stone-900/50;
+	@apply border-stone-900/10 dark:border-stone-100/25;
+	@apply backdrop-blur-sm;
 }
 
 main {
@@ -62,12 +72,4 @@ article {
 
 .animate.show {
 	@apply opacity-100 translate-y-0;
-}
-
-html #back-to-top {
-	@apply opacity-0 pointer-events-none;
-}
-
-html.scrolled #back-to-top {
-	@apply opacity-100 pointer-events-auto;
 }

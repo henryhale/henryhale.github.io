@@ -6,6 +6,11 @@ logoURL: "https://github.com/henryhale/text-server/raw/master/web/public/favicon
 demoURL: "https://henryhale.github.io/text-server/"
 repoURL: "https://github.com/henryhale/text-server/"
 featured: true
+tags:
+    - web-dev
+    - golang
+    - javascript
+    - vue
 ---
 
 ![text-server](https://github.com/user-attachments/assets/3b17dbff-d7cd-42c4-b5aa-18653fe84286)

@@ -2,6 +2,10 @@
 title: "The Red Light Paradox: How Invisible Parts Create Visible Wholes"
 description: "My view on the question: Is water wet?"
 date: "Aug 19 2024"
+tags:
+    - science
+    - case-study
+    - paradox
 ---
 
 Have you ever wondered why we see red light as red? It seems like a simple

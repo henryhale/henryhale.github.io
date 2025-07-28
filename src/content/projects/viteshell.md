@@ -6,6 +6,10 @@ demoURL: "https://henryhale.github.io/vix"
 repoURL: "https://github.com/henryhale/viteshell"
 logoURL: "https://github.com/henryhale/viteshell/raw/master/media/logo.jpg"
 featured: true
+tags:
+    - typescript
+    - library
+    - simulation
 ---
 
 ![ViteShell](https://github.com/henryhale/vix/raw/master/media/preview.png)
