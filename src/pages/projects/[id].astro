@@ -14,8 +14,8 @@ export async function getStaticPaths() {
 		params: { id: entry.id },
 		props: {
 			entry,
-			next: list[(i + 1) % list.length],
-			prev: list[(i - 1 + list.length) % list.length],
+			prev: list[(i + 1) % list.length],
+			next: list[(i - 1 + list.length) % list.length],
 		},
 	}))
 }
