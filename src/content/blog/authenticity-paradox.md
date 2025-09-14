@@ -4,7 +4,6 @@ description: "How do we reconcile self-perception with observable reality?"
 date: "Mar 4, 2025"
 tags:
     - psychology
-    - case-study
     - paradox
 ---
 

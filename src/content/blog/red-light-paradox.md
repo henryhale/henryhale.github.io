@@ -4,7 +4,6 @@ description: "My view on the question: Is water wet?"
 date: "Aug 19 2024"
 tags:
     - science
-    - case-study
     - paradox
 ---
 

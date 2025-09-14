@@ -4,7 +4,6 @@ description: "The molecular approach to data compression."
 date: "Jul 22 2024"
 tags:
     - cs
-    - case-study
     - data-compression
 ---
 
