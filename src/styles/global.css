@@ -35,7 +35,7 @@ html:not(.scrolled) header {
 
 html.scrolled header {
 	@apply bg-stone-100/75 dark:bg-stone-900/50;
-	@apply border-stone-900/10 dark:border-stone-100/25;
+	@apply border-stone-900/10 dark:border-stone-800;
 	@apply backdrop-blur-sm;
 }
 
