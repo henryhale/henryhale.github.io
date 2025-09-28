@@ -34,15 +34,12 @@ const { Content } = await render(entry)
 				class="order-2 w-full h-full group-hover:text-black group-hover:dark:text-white blend"
 			>
 				<div class="flex flex-wrap gap-2">
-					<div class="text-sm uppercase">
+					<div class="text-xs uppercase">
 						Prev {post[prev.collection] || ""}
 					</div>
 				</div>
 				<div class="font-semibold mt-3 text-black dark:text-white">
 					{prev.data.title}
-				</div>
-				<div class="text-sm">
-					{prev.data.description}
 				</div>
 			</div>
 			<svg
@@ -76,14 +73,11 @@ const { Content } = await render(entry)
 			<div
 				class="w-full h-full text-right group-hover:text-black group-hover:dark:text-white blend"
 			>
-				<div class="text-sm uppercase">
+				<div class="text-xs uppercase">
 					Next {post[next.collection] || ""}
 				</div>
 				<div class="font-semibold mt-3 text-black dark:text-white">
 					{next.data.title}
-				</div>
-				<div class="text-sm">
-					{next.data.description}
 				</div>
 			</div>
 			<svg
