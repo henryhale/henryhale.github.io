@@ -4,6 +4,7 @@ description: "When does personal interpretation override collective understandin
 date: "Feb 14 2025"
 tags:
     - observation
+    - ai-polished
 ---
 
 Imagine someone saying:

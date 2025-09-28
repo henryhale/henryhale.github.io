@@ -4,6 +4,7 @@ description: "The molecular approach to data compression."
 date: "Jul 22 2024"
 tags:
     - science
+    - ai-polished
 ---
 
 ![states of matter meme](https://i.kym-cdn.com/photos/images/facebook/002/187/117/701.jpg)
