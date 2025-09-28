@@ -63,7 +63,13 @@ const list = ["All", ...tags]
 					.forEach(function (li) {
 						if (
 							el.dataset.tag === "All" ||
-							li.dataset.tagged?.includes(el.dataset.tag)
+							(`${li.dataset?.tagged ?? ""}`)
+								.split(",")
+								.some(
+									(t) =>
+										t.toLowerCase() ===
+										el.dataset.tag.toLowerCase()
+								)
 						) {
 							li.style.display = "block"
 						} else {
