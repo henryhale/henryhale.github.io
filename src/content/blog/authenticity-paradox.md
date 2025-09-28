@@ -3,7 +3,6 @@ title: "The Authenticity Paradox: When Self-Perception Meets Reality"
 description: "How do we reconcile self-perception with observable reality?"
 date: "Mar 4, 2025"
 tags:
-    - psychology
     - paradox
 ---
 

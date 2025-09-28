@@ -3,8 +3,7 @@ title: "The Blame Instinct: When Explanations Become Excuses"
 description: "Why do some people always find a cause or something to blame?"
 date: "Mar 15 2025"
 tags:
-    - psychology
-    - case-study
+    - observation
 ---
 
 ![](https://s3.eu-west-1.amazonaws.com/static.gapminder.org/GapminderMedia/wp-uploads/20180311222943/blame.png)

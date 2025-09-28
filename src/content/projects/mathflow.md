@@ -8,7 +8,7 @@ logoURL: "https://mathflowjs.github.io/logo.svg"
 featured: true
 tags:
     - typescript
-    - npm-library
+    - library
 ---
 
 ![Mathflow](https://mathflowjs.github.io/logo.svg)

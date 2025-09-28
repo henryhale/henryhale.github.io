@@ -4,7 +4,7 @@ description: "My experience with AI chatbots on assisted decision making."
 date: "Sep 14 2025"
 tags:
     - ai
-    - case-study
+    - observation
 ---
 
 AI chatbots are invariably presented as helpful assistants. _"What can I help you with?"_ or _"How can I help you?"_ they ask with programmed enthusiasm.

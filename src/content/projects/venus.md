@@ -6,9 +6,8 @@ demoURL: "https://henryhale.github.io/venus/"
 repoURL: "https://github.com/henryhale/venus"
 logoURL: "https://github.com/henryhale/venus/raw/master/public/favicon.png"
 tags:
-    - web-dev
-    - simulation
     - typescript
+    - simulation
 ---
 
 ![Venus](https://github.com/henryhale/venus/raw/master/screenshot.png)

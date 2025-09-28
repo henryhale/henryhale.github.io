@@ -6,9 +6,8 @@ demoURL: "https://henryhale.github.io/create-unit"
 repoURL: "https://github.com/henryhale/create-unit"
 logoURL: "https://github.com/henryhale/create-unit/raw/master/starter/src/public/favicon.png"
 tags:
-    - web-dev
     - javascript
-    - npm-library
+    - library
 ---
 
 ![Unit.js](https://github.com/henryhale/create-unit/raw/master/screenshot.png)

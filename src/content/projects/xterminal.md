@@ -8,7 +8,7 @@ logoURL: "https://github.com/henryhale/xterminal/raw/master/assets/logo-rounded.
 featured: true
 tags:
     - typescript
-    - npm-library
+    - library
 ---
 
 ![XTerminal](https://github.com/henryhale/vix/raw/master/media/preview.png)

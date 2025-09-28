@@ -3,8 +3,7 @@ title: "Data Compression Explained: From Gas to Solid and Beyond"
 description: "The molecular approach to data compression."
 date: "Jul 22 2024"
 tags:
-    - cs
-    - data-compression
+    - science
 ---
 
 ![states of matter meme](https://i.kym-cdn.com/photos/images/facebook/002/187/117/701.jpg)

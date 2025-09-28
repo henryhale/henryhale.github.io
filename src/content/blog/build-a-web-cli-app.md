@@ -4,9 +4,7 @@ description: "An introduction to xterminal.js with an example"
 date: "Jan 12 2025"
 draft: true
 tags:
-    - web-dev
-    - tutorial
-    - javascript
+    - programming
 ---
 
 [XTerminal](https://xterminal.js.org) is a simple and perfomant web-based component written in TypeScript that lets you create command-line interfaces for use in the browser. It builds on top of standard HTML, CSS, and JavaScript to provide a simple yet powerful model that helps you develop command-line interfaces in the browser.

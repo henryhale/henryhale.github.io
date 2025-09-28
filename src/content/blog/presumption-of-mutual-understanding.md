@@ -3,8 +3,7 @@ title: "Presumption of Mutual Understanding"
 description: "When does personal interpretation override collective understanding, and what are the consequences of rejecting shared meanings in society?"
 date: "Feb 14 2025"
 tags:
-    - psychology
-    - case-study
+    - observation
 ---
 
 Imagine someone saying:
