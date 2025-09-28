@@ -73,6 +73,7 @@ const list = ["All", ...tags]
 			})
 		})
 	}
+	initTags()
 	document.addEventListener("DOMContentLoaded", initTags)
 	document.addEventListener("astro:after-swap", initTags)
 </script>
