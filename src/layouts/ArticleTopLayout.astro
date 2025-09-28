@@ -67,6 +67,15 @@ const logoUrl = collection === "projects" ? data.logoURL : null
 			<div class="mt-1">
 				{description}
 			</div>
+			<ul class="mt-2 flex flex-wrap gap-1">
+				{
+					entry.data.tags.map((tag: string) => (
+						<li class="text-xs uppercase py-0.5 px-2 rounded bg-black/5 dark:bg-white/10 text-black/75 dark:text-white/75">
+							{tag}
+						</li>
+					))
+				}
+			</ul>
 		</div>
 		{
 			logoUrl && (
