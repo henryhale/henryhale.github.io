@@ -24,7 +24,7 @@ const work = defineCollection({
 })
 
 const projects = defineCollection({
-	loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
+	loader: file("src/content/projects/index.yaml"),
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
@@ -33,7 +33,6 @@ const projects = defineCollection({
 		demoURL: z.string().optional(),
 		repoURL: z.string().optional(),
 		logoURL: z.string().optional(),
-		featured: z.boolean().optional(),
 		tags: z.array(z.string()),
 	}),
 })

@@ -1,0 +1,156 @@
+mathflow:
+  title: Mathflow
+  description: 🟦 A scripting language designed for solving mathematical expressions and calculations.
+  date: Mar 31 2024
+  demoURL: https://henryhale.github.io/mathflow-demo/
+  repoURL: https://github.com/mathflowjs/mathflow/
+  logoURL: https://mathflowjs.github.io/logo.svg
+  tags:
+    - typescript
+    - library
+
+mdr:
+  title: Micro Data Refinement (MDR)
+  description: 🧩 A pattern recognition game based on the severance series.
+  date: Apr 18 2025
+  demoURL: https://henryhale.github.io/mdr/
+  repoURL: https://github.com/henryhale/mdr/
+  logoURL: https://github.com/henryhale/mdr/raw/master/public/img/lumon.svg
+  tags:
+    - exploratory
+    - typescript
+    - game
+
+pixsim:
+  title: PixSim
+  description: 👾 A pixel-based led matrix simulator
+  date: Dec 27 2024
+  demoURL: https://henryhale.github.io/pixsim/
+  repoURL: https://github.com/henryhale/pixsim
+  logoURL: https://henryhale.github.io/pixsim/favicon.svg
+  tags:
+    - exploratory
+    - simulation
+
+text-server:
+  title: Text Server
+  description: 🗒 Like code-server but delivering a WYSIWYG editor and file explorer only.
+  date: May 07 2025
+  logoURL: https://github.com/henryhale/text-server/raw/master/web/public/favicon.svg
+  demoURL: https://henryhale.github.io/text-server/
+  repoURL: https://github.com/henryhale/text-server/
+  tags:
+    - golang
+    - javascript
+    - web-app
+
+unit.js:
+  title: Unit.js
+  description: 🟡 Build your website in units.
+  date: Mar 31 2024
+  demoURL: https://henryhale.github.io/create-unit
+  repoURL: https://github.com/henryhale/create-unit
+  logoURL: https://github.com/henryhale/create-unit/raw/master/starter/src/public/favicon.png
+  tags:
+    - javascript
+    - library
+
+venus:
+  title: Venus
+  description: 🦠 Predator-prey simulation with predefined behavior.
+  date: Mar 31 2024
+  demoURL: https://henryhale.github.io/venus/
+  repoURL: https://github.com/henryhale/venus
+  logoURL: https://github.com/henryhale/venus/raw/master/public/favicon.png
+  tags:
+      - typescript
+      - simulation
+
+viteshell:
+  title: ViteShell
+  description: ✴️ A minimalistic shell implementation written in TypeScript.
+  date: Mar 31 2024
+  demoURL: https://henryhale.github.io/vix
+  repoURL: https://github.com/henryhale/viteshell
+  logoURL: https://github.com/henryhale/viteshell/raw/master/media/logo.jpg
+  tags:
+      - typescript
+      - library
+      - simulation
+
+xterminal:
+  title: XTerminal
+  description: 💲 Create web-based command line interfaces.
+  date: Mar 31 2024
+  demoURL: https://xterminal.js.org/demo/
+  repoURL: https://github.com/henryhale/xterminal
+  logoURL: https://github.com/henryhale/xterminal/raw/master/assets/logo-rounded.png
+  tags:
+    - typescript
+    - library
+    - cli
+
+# ttspeech:
+#   title: TTSpeech
+#   description: A fully basic voice synthesizer in Vanilla JS
+#   date: 
+#   demoURL: https://henryhale.github.io/ttspeech
+#   repoURL: https://github.com/henryhale/ttspeech
+#   logoURL:
+#   tags:
+#     - javascript
+#     - web-app
+
+livecode:
+  title: LiveCode
+  description: A minimal, efficient front-end tool for quick, streamlined tasks.
+  date: Mar 14 2023
+  demoURL: https://henryhale.github.io/livecode
+  repoURL: https://github.com/henryhale/livecode
+  logoURL: https://github.com/henryhale/livecode/raw/master/public/brand.png
+  tags:
+    - typescript
+    - web-app
+
+depgraph:
+  title: Depgraph
+  description: A developer's tool for understanding new codebases.
+  date: Sep 9 2024
+  repoURL: https://github.com/henryhale/depgraph
+  tags:
+    - golang
+    - cli
+
+telemate:
+  title: TeleMate
+  description: A small-scale messaging application for devs.
+  date: Oct 22 2023
+  demoURL: https://telemate.onrender.com
+  repoURL: https://github.com/henryhale/telemate
+  logoURL: https://github.com/henryhale/telemate/raw/master/client/public/logo.svg
+  tags:
+    - javascript
+    - websockets
+    - web-app
+
+worstcase:
+  title: Worstcase
+  description: Automatically analyze time and space complexity of JavaScript code.
+  date: Aug 21 2025
+  demoURL: https://henryhale.github.io/worstcase-demo
+  repoURL: https://github.com/henryhale/worstcase
+  logoURL: https://github.com/henryhale/worstcase/raw/master/public/logo.svg
+  tags:
+    - typescript
+    - performance
+
+# notes:
+#   title: Notes
+#   description: A simple note taking application with offline support.
+#   date:
+#   demoURL: https://henryhale.github.io/notes
+#   repoURL: https://github.com/henryhale/notes
+#   logoURL:
+#   tags:
+#     - javascript
+#     - web-app
