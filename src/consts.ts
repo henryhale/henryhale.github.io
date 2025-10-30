@@ -36,11 +36,6 @@ export const CONTACT: Page = {
 
 export const SOCIALS: Socials = [
 	{
-		ICON: "envelope",
-		NAME: "email",
-		HREF: "mailto:hello@henryhale.dev",
-	},
-	{
 		ICON: "twitter",
 		NAME: "twitter-x",
 		HREF: "https://twitter.com/devhenryhale",

@@ -5,6 +5,8 @@ import Link from "@components/Link.astro"
 import Icon from "@components/Icon.astro"
 import FormInput from "@components/FormInput.astro"
 import { CONTACT, SITE, SOCIALS } from "@consts"
+import Image from "astro/components/Image.astro"
+import Me from "../../../public/me.png"
 ---
 
 <PageLayout title={CONTACT.TITLE} description={CONTACT.DESCRIPTION}>
@@ -43,6 +45,8 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 					))
 				}
 			</ul>
+			<div class="flex items-center text-center">
+				<Image src={Me} alt={""} class="rounded" width="75" height="20" />@henryhale.dev</div>
 			<form
 				method="post"
 				action="https://formbold.com/s/3n55d"
