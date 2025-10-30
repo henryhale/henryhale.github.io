@@ -24,7 +24,7 @@ With that said, the rest of this post will focus on how to setup a mobile develo
 
 ## Use cases
 
-In case you were wondering, who is this for? Well, if any of the following cases clearly describes you;
+In case you were wondering, to who is this for? Well, if any of the following cases clearly describes you;
 
 - don't own a personal computer - laptop or desktop
 - use my friend's computer to code without completely exposing my project via copy and paste
@@ -86,7 +86,7 @@ Try it to create `myfile.c` using:
 $ nano --linenumbers --indicator --mouse --tabsize=2 --softwrap myfile.c
 ```
 
-The above command opens GNU Nano editor with line number on the left, a scroll indicator, mouse support, tab size of 2 spaces and displays overlong lines on multiple rows.
+The above command opens GNU Nano editor with line number on the left, a scroll indicator, mouse support, tab size of 2 spaces and wraps long lines on multiple rows.
 
 This is not limited to GNU Nano, you can install any other command line editor like
 

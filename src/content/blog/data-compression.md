@@ -3,7 +3,7 @@ title: "Data Compression Explained: From Gas to Solid and Beyond"
 description: "The molecular approach to data compression."
 date: "Jul 22 2024"
 tags:
-    - science
+    - computer-science
     - ai-polished
 ---
 
