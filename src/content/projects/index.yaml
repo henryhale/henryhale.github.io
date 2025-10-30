@@ -137,7 +137,7 @@ worstcase:
   title: Worstcase
   description: Automatically analyze time and space complexity of JavaScript code.
   date: Aug 21 2025
-  demoURL: https://henryhale.github.io/worstcase-demo
+  demoURL: https://henryhale.github.io/worstcase-monaco-demo
   repoURL: https://github.com/henryhale/worstcase
   logoURL: https://github.com/henryhale/worstcase/raw/master/public/logo.svg
   tags:
