@@ -2,7 +2,6 @@
 title: "Introducing Worstcase - A JavaScript Complexity Analyzer"
 description: "Automatically see the time and space complexity of JavaScript code as you type."
 date: "Oct 30 2025"
-draft: true
 tags:
     - typescript
     - library
