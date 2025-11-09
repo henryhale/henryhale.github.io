@@ -175,4 +175,4 @@ For a smooth experience like on my personal computer,
 My overall experience was super amazing with lots of ephipanies one after another.
 Oftentimes, I use this workflow to code on the go. Sometimes `ssh` into Termux and changing its password so often using `passwd` command.
 Beyond this, I tried a full Linux environment - installing Ubuntu 24 with a graphical user interface and using a VNC server.
-With that, I could code on tablets or big screens by screen casting or my work computer.
+With that, I could code on tablets or big screens by screen casting on my work computer.
