@@ -40,3 +40,8 @@ I don't need a helpful AI assistant. I need a friend that can:
 - Confide in me
 
 So, have you tried AI-assisted decision making? What measures can be put in place to ensure AI chatbots become truly helpful?
+
+--- 
+
+Related posts:
+- [LLMs are steroids for your Dunning Kruger](https://bytesauna.com/post/dunning-kruger)
