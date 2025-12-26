@@ -2,7 +2,7 @@ mathflow:
   title: Mathflow
   description: 🟦 A scripting language designed for solving mathematical expressions and calculations.
   date: Mar 31 2024
-  demoURL: https://henryhale.github.io/mathflow-demo/
+  demoURL: https://mathflowjs.github.io/demo/
   repoURL: https://github.com/mathflowjs/mathflow/
   logoURL: https://mathflowjs.github.io/logo.svg
   tags:
@@ -154,3 +154,14 @@ worstcase:
 #   tags:
 #     - javascript
 #     - web-app
+
+ilovemedia:
+  title: iLoveMedia
+  description: 💙 A collection of powerful media utilities that run entirely in your browser. 
+  date: Dec 25 2025
+  demoURL: https://henryhale.github.io/iLoveMedia
+  repoURL: https://github.com/henryhale/iLoveMedia
+  logoURL: https://github.com/henryhale/iLoveMedia/raw/master/public/favicon-32x32.png
+  tags:
+    - typescript
+    - web-app
