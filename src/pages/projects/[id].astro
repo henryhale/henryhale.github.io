@@ -39,6 +39,11 @@ const { title, description } = entry.data
 	</TopLayout>
 	<BottomLayout>
 		<div class="animate">
+			{
+				entry.data.screenshotURL ? (
+					<img src={entry.data.screenshotURL} />
+				) : null
+			}
 			<ArticleBottomLayout entry={entry} next={next} prev={prev} />
 		</div>
 	</BottomLayout>

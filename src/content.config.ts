@@ -33,6 +33,7 @@ const projects = defineCollection({
 		demoURL: z.string().optional(),
 		repoURL: z.string().optional(),
 		logoURL: z.string().optional(),
+		screenshotURL: z.string().optional(),
 		tags: z.array(z.string()),
 	}),
 })
