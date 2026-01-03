@@ -63,7 +63,7 @@ const list = ["All", ...tags]
 					.forEach(function (li) {
 						if (
 							el.dataset.tag === "All" ||
-							(`${li.dataset?.tagged ?? ""}`)
+							`${li.dataset?.tagged ?? ""}`
 								.split(",")
 								.some(
 									(t) =>

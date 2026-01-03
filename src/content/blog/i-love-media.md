@@ -19,8 +19,8 @@ iLoveMedia runs entirely in your browser, no servers, no uploads, and no trackin
 Your files never leave your device, because all the processing happens locally.
 
 > **That said, why fairly functional?**
-> 
-> Everything is perfect until you try to convert a 500MB MOV video to MP4. 
+>
+> Everything is perfect until you try to convert a 500MB MOV video to MP4.
 > While it is possible, the conversion takes significantly long to complete compared to server-backed tools.
 > This depends not only on the file size but also available resources on your machine.
 
@@ -58,7 +58,7 @@ Using server-backed online tools makes me feel as terrible as the weight of the 
 Even though I want to trust them, I can not.
 So I did the same thing I will continue doing, building local-first tools to go easy with my heart.
 
-Honestly, the project itself has gone through an interesting evolution. 
+Honestly, the project itself has gone through an interesting evolution.
 iLoveMedia was originally co-authored with [Google Gemini](https://gemini.google.com) in [AI Studio](https://aistudio.google.com), starting as a proof of concept built with [React](https://react.dev) and [Tailwind CSS](https://tailwindcss.com).
 As the scope grew, so did the need for better structure and long-term maintainability.
 That's why the project is currently undergoing a major refactor, migrating to [Vue 3](https://vuejs.org) with [vueuse](https://vueuse.org), [shadcn-vue](https://shadcn-vue.com) and [Lucide icons](https://lucide.dev).
@@ -70,5 +70,5 @@ iLoveMedia is fully open source under the MIT license and designed to be offline
 You can [download the source code](https://github.com/henryhale/iLoveMedia) and run it locally, modify it, and even use it without an internet connection once loaded.
 While the project is still in the middle of a heavy migration, it's already usable and actively evolving.
 
-At its heart, iLoveMedia is a statement: powerful tools don't have to come at the cost of privacy. 
+At its heart, iLoveMedia is a statement: powerful tools don't have to come at the cost of privacy.
 As browsers continue to grow more capable, local-first software becomes not just possible, but practical.
