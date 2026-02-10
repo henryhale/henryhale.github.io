@@ -4,7 +4,7 @@ description: "An introduction to xterminal.js with an example"
 date: "Jan 12 2025"
 draft: true
 tags:
-	- software
+    - software
     - tutorial
 ---
 
