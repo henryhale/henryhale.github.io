@@ -8,29 +8,28 @@ tags:
 ---
 
 We, humans, are obsessed with difference and desperate for sameness.
-Walk into any room(an office, a coffee shop) and watch the silent assessment unfold. 
+Walk into any room(an office, a coffee shop) and watch the silent assessment unfold.
 People scan for markers like race, accent, clothing, posture, the phone someone carries.
 These differences fascinate us, define our first impressions, shape who we approach or avoid.
 Yet the moment we form groups, those same differences get suppressed, sacrificed for the sake of unity.
 This pattern repeats at every scale from home to school/work to corporations to nations.
-Small individual differences organize us into groups, and those groups demand we overlook the very differences that drew us together. 
+Small individual differences organize us into groups, and those groups demand we overlook the very differences that drew us together.
 
 For example, a random encounter between two people involves instant calculation: skin color suggests race, posture and eye contact signal confidence, clothing hints at wealth.
 Before a single word is spoken, each person has begun constructing an image of the other, filtering observations through their own experience and bias.
-The curiosity follows naturally, "where are you from?" 
+The curiosity follows naturally, "where are you from?"
 We want to know how different they are and where that difference places them relative to us.
-For instance, if you believed that Asian people are not friendly and encountered one in your day, say at work or school or your commute, your mind would attempt to prove the point of unfriendliness. 
+For instance, if you believed that Asian people are not friendly and encountered one in your day, say at work or school or your commute, your mind would attempt to prove the point of unfriendliness.
 It oftentimes goes sideways.
-
 
 ## forming groups
 
-It is common in schools for teachers to split the class into groups for an exercise. 
+It is common in schools for teachers to split the class into groups for an exercise.
 This is one of the many moments that prompt introspection about our desires and values.
 A specific person's name renders itself in your mind almost instantly, often the product of hyperfocus and rapid reasoning as you rush to secure them for your group.
 Why this person?
 Something about them creates a meaningful difference at the individual level.
-Their presence in your group matters. 
+Their presence in your group matters.
 Meanwhile, everyone else is doing the same.
 
 Zoom out to the entire group that's formed.
