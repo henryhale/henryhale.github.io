@@ -3,9 +3,8 @@ title: "Introducing MathFlow - A Robust Mathematical Expression Parser"
 description: "Parse, evaluate and work with mathematical expressions with ease. Step-by-step solutions included."
 date: "Nov 9 2025"
 tags:
-    - typescript
-    - library
-    - computer-science
+    - software
+    - project
 ---
 
 Writing mathematical expressions in code shouldn't feel like translating between two foreign languages.

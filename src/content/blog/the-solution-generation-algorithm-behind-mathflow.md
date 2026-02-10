@@ -4,9 +4,7 @@ description: "How MathFlow is able to produce step-by-step solutions for mathema
 date: "Nov 9 2025"
 draft: true
 tags:
-    - typescript
-    - library
-    - computer-science
+    - software
 ---
 
 TODO:

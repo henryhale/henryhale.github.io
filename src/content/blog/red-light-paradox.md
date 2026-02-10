@@ -5,7 +5,6 @@ date: "Aug 19 2024"
 tags:
     - science
     - paradox
-    - ai-polished
 ---
 
 Have you ever wondered why we see red light as red? It seems like a simple

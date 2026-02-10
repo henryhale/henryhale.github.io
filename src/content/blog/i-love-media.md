@@ -3,7 +3,8 @@ title: "Building iLoveMedia"
 description: "Your browser is good enough to entirely run powerful media utilities locally. "
 date: "Jan 1 2026"
 tags:
-    - opensource
+    - software
+    - project
 ---
 
 Most server-backed online tools follow the same pattern: upload your files, wait for a server to process them, then hope your data is handled responsibly.

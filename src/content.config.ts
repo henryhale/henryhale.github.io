@@ -8,7 +8,18 @@ const blog = defineCollection({
 		description: z.string(),
 		date: z.coerce.date(),
 		draft: z.boolean().optional(),
-		tags: z.array(z.string()),
+		tags: z.array(
+			z.enum([
+				"ai",
+				"observation",
+				"paradox",
+				"project",
+				"science",
+				"software",
+				"tutorial",
+				"ux",
+			])
+		),
 	}),
 })
 

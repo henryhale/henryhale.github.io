@@ -4,7 +4,6 @@ description: "How do we reconcile self-perception with observable reality?"
 date: "Mar 4, 2025"
 tags:
     - paradox
-    - ai-polished
 ---
 
 ![Migrating canada geese by Sharply_done](https://images.fineartamerica.com/images-medium-large-5/xl-migrating-canada-geese-sharplydone.jpg)

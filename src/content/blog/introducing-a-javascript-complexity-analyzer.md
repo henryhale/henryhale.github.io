@@ -3,9 +3,8 @@ title: "Introducing Worstcase - A JavaScript Complexity Analyzer"
 description: "Automatically see the time and space complexity of JavaScript code as you type."
 date: "Oct 30 2025"
 tags:
-    - typescript
-    - library
-    - computer-science
+    - software
+    - project
 ---
 
 Understanding the time and space complexity of your code is crucial for writing performant applications. But manually analyzing every function can be tedious and error-prone. That's why I built [worstcase](https://github.com/henryhale/worstcase) - a tool that automatically computes algorithmic complexity and displays it right in your editor.
