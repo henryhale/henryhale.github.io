@@ -14,16 +14,16 @@ export async function getStaticPaths() {
 		params: { id: entry.id },
 		props: {
 			entry,
-			prev: list[(i + 1) % list.length],
-			next: list[(i - 1 + list.length) % list.length],
+			prev: list[i + 1],
+			next: list[i - 1],
 		},
 	}))
 }
 
 type Props = {
 	entry: CollectionEntry<"blog">
-	next: CollectionEntry<"blog">
-	prev: CollectionEntry<"blog">
+	next?: CollectionEntry<"blog">
+	prev?: CollectionEntry<"blog">
 }
 
 const { entry, next, prev } = Astro.props
