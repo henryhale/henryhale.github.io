@@ -8,33 +8,39 @@ tags:
     - observation
 ---
 
-The urge to make a sigh of relief after typing a vaguely crafted text prompt into ChatGPT then seat back and relax, waiting for this genie to do magical things only to realize magic is no magic but rather a collection of paraphrased words arranged to make complexity seem/feel simple.
+The urge to make a sigh of relief after typing a vaguely crafted text prompt into ChatGPT, then sit back and relax, waiting for this genie to do magical things - only to realize the magic is no magic at all, but rather a collection of paraphrased words arranged to make complexity seem simple.
 
-While rolling eyes over this amazing typing animation with results; there you go.
+While rolling eyes over this amazing typing animation with results, there it goes.
 A new group text, can't miss it.
 Oh wait, I got it.
-Let me see, do I know it now?
-Opps, followed by frustration.
-Hey wizard, show me some magic.
-And there you go again typing that ice breaking prompt to fill the void within.
+Let me check.
+Do I understand it now?
+Nope.
+Frustration follows.
+Hey wizard, show me some real magic.
+And there I go again typing that ice-breaking prompt to fill the void within.
 
-One, two, three blinks of an eye and it's four hours down.
+One, two, three blinks of an eye and it's four hours down the drain.
+Scrolling, prompting, re-prompting.
 Well, hunger is approaching.
-Miracles happen just right when you least expected them.
-A text ads or message or post saying, _"i am not alone, a little relaxation won't hurt."_
+But miracles happen just right when you least expected them.
+A text, an ad, a post saying, _"I am not alone. A little relaxation won't hurt."_
 
-Oh shit, I haven't written this answer.
-MetaAI gives short and precise answers, let me use this.
-Man, I don't see that keyword.
-ChatGPT really placed it well.
+Oh shit, I haven't written this answer yet.
+MetaAI gives short and precise answers, let me use that.
+Wait, I don't see that keyword.
+ChatGPT really placed it better.
 But they are both correct.
 I don't know any better.
-Should write MetaAI's answer, short and quick.
+Should write MetaAI's answer?
+Short and quick.
 
-It was in this moment when I lost my soul 💀 seated next to a stranger.
+It was in this moment when I lost my soul 💀 seated next to a stranger in the library, pretending to learn.
 
-Started asking myself question after question; one of which is: _where is this going?_
-The search or desire for simplicity is enormous and forever expanding.
+I started asking myself question after question, one of which was: _where is this going?_
+The search for simplicity, the desire to avoid effort, is enormous and forever expanding.
+Maybe I don't know any better either.
+But I was certian, this was going nowhere.
 
-Reading wikis/docs/notes about the topic is crap for some.
-In fact it seems like they are scared of the lone inner dialogue when reading the entire piece while keeping track of important information as well as articulating the implications from the text.
+Reading wikis, docs, notes about the topic feels like crap to some.
+In fact, it seems like they're scared of the lone inner dialogue when reading the entire piece, keeping track of important information, and articulating the implications from the text.
