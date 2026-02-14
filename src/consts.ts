@@ -1,4 +1,4 @@
-import type { Site, Page, Socials, Services } from "@types"
+import type { Site, Page, Socials } from "@types"
 
 export const SITE: Site = {
 	IMAGE: "https://github.com/henryhale.png",
@@ -44,18 +44,5 @@ export const SOCIALS: Socials = [
 		ICON: "github",
 		NAME: "github",
 		HREF: "https://github.com/henryhale",
-	},
-]
-
-export const SERVICES: Services = [
-	{
-		ICON: "code",
-		TITLE: "Rapid Prototyping",
-		TEXT: "Building fast, functional prototypes to explore ideas with minimal overhead.",
-	},
-	{
-		ICON: "branch",
-		TITLE: "End-to-End Product Thinking",
-		TEXT: "Taking ideas from scratch to usable tools - frontend to backend, logic to UI.",
 	},
 ]

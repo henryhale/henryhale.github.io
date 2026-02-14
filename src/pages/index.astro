@@ -4,8 +4,7 @@ import Container from "@components/Container.astro"
 import PageLayout from "@layouts/PageLayout.astro"
 import ArrowCard from "@components/ArrowCard.astro"
 import Link from "@components/Link.astro"
-import IconCard from "@components/IconCard.astro"
-import { SITE, HOME, SERVICES } from "@consts"
+import { SITE, HOME } from "@consts"
 
 const blog = (await getCollection("blog"))
 	.filter((post) => !post.data.draft)
@@ -28,7 +27,7 @@ const projects = (await getCollection("projects"))
 				/>
 			</div>
 			<h4
-				class="animate font-semibold text-black dark:text-white text-lg"
+				class="animate font-semibold text-black dark:text-white text-lg lg:text-2xl"
 			>
 				Hi, I'm Henry Hale <span class="text-xl">👋🏻</span>
 			</h4>
@@ -36,50 +35,15 @@ const projects = (await getCollection("projects"))
 		<div class="space-y-16">
 			<article class="space-y-4 text-justify">
 				<p class="animate">
-					I am a developer driven by curiosity. I build for the thrill
-					of the idea, not to chase trends, but to chase insight. My
-					projects range from toy experiments to ambitious
-					system-level concepts.
-					<p class="animate">
-						Oftentimes, I work on problems I face during the course
-						of my daily life; subtle or interesting. I write about
-						some of them on <Link href="/blog">my blog</Link>. While
-						not programming, I'm watching movies and past tech
-						events. I enjoy mobile games (<Link
-							href="https://play.google.com/store/apps/details?id=net.apex_designs.payback2"
-							>payback²</Link
-						>
-						and <Link
-							href="https://play.google.com/store/apps/details?id=com.tohsoft.arashi.ninja.shadow"
-							>ninja warrior</Link
-						>), chocolate cake, teaching, tours and travel.
-					</p>
-					<p class="animate">
-						Through this website, you'll find a glimpse into my
-						world.
-						<br />
-						<br />
-						Welcome to my corner of the internet.
-					</p>
+					I write software in JavaScript, Go and whatever gets the job
+					done. Interested in local-first architectures and solving
+					real problems, even small ones. Exploring AI/ML fundamentals
+					right now. I work on problems I encounter in daily life and
+					sometimes I write about them on my <Link href="/blog"
+						>my blog</Link
+					>.
 				</p>
 			</article>
-
-			<section class="animate space-y-6">
-				<h5 class="animate font-semibold text-black dark:text-white">
-					Areas of Expertise
-				</h5>
-				<ul class="animate grid sm:grid-cols-2 gap-4">
-					{
-						SERVICES.map((s) => (
-							<IconCard
-								icon={s.ICON}
-								title={s.TITLE}
-								text={s.TEXT}
-							/>
-						))
-					}
-				</ul>
-			</section>
 
 			<section class="animate space-y-6">
 				<div
