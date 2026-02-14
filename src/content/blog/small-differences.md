@@ -7,7 +7,9 @@ tags:
     - observation
 ---
 
-We, humans, are obsessed with difference and desperate for sameness.
+## genesis
+
+We observe each other, obsessed with difference and desperate for sameness.
 Walk into any room(an office, a coffee shop) and watch the silent assessment unfold.
 People scan for markers like race, accent, clothing, posture, the phone someone carries.
 These differences fascinate us, define our first impressions, shape who we approach or avoid.
@@ -49,6 +51,8 @@ This is when you lean back to your own group, reminding yourself and your teamma
 Often this is accompanied by identifying weak links in the other groups and sharing those observations within your circle.
 The inner belief grows stronger.
 
+## believing what we see
+
 Let's say, groups are identified with colors like red, blue, green and so on.
 The belief is then tired to something physical that reminds everyone where they belong.
 It is no longer a belief but objective faith.
@@ -56,22 +60,25 @@ In the world today, a classic example is exhibited in sports teams each having i
 When people act in the world, doing the exercise in this case, we fight for the success of our group.
 This act solidifies and engraves the belief within us as we fight for the group.
 
-## but what if we don't
-
-In programming, this pattern crystallizes clearly.
-Tabs versus spaces, Python versus JavaScript, React versus Vue.
-These aren't merely technical choices though they become identities.
-Teams form around tech stacks and individual preferences get sacrificed for the codebase's consistency.
-Then the belief ties to something physical like laptop stickers, or framework logos on t-shirts.
-_"I'm a React developer"_ becomes who you are, not what you do.
-
-But some move fluidly between languages and contribute to competing projects without declaring allegiance.
-This extends beyond code.
-In religion, nationality, politics, career, we face the same pattern.
-The search for meaning is inevitable since we are wired to finding belonging.
-But we're also human, which means we're free to pick and choose.
-Free to participate without being possessed.
-Free to wear the colours without forgetting they're just colors.
+## finally
 
 The small differences will always organize us.
 The question is whether we let them define us.
+
+> Example from Claude Sonnet 4.5 on Feb 11, 2026
+>
+> ## but what if we don't
+> In programming, this pattern crystallizes clearly.
+> Tabs versus spaces, Python versus JavaScript, React versus Vue.
+> These aren't merely technical choices though they become identities.
+> Teams form around tech stacks and individual preferences get sacrificed for the codebase's consistency.
+> Then the belief ties to something physical like laptop stickers, or framework logos on t-shirts.
+> _"I'm a React developer"_ becomes who you are, not what you do.
+>
+> But some move fluidly between languages and contribute to competing projects without declaring allegiance.
+> This extends beyond code.
+> In religion, nationality, politics, career, we face the same pattern.
+> The search for meaning is inevitable since we are wired to finding belonging.
+> But we're also human, which means we're free to pick and choose.
+> Free to participate without being possessed.
+> Free to wear the colours without forgetting they're just colors.
