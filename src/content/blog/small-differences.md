@@ -1,13 +1,16 @@
 ---
 title: "Small differences"
 description: "A reflection on the formation of groups"
-date: "Feb 11 2026"
-draft: true
+date: "Feb 14 2026"
 tags:
     - observation
 ---
 
-## genesis
+Lately, I have come to learn that my presence in a group impacts each member's wellbeing implicitly and its success explicitly.
+A quick search revealed that this is known as [Group dynamics](https://en.wikipedia.org/wiki/Group_dynamics), a concept at work in nations, teams, communities, families, and essentially every group setting.
+In this post, I share my observations on _how groups are formed_ and _why small differences matter_ using relatable examples from my life experience.
+
+## Genesis
 
 We observe each other, obsessed with difference and desperate for sameness.
 Walk into any room(an office, a coffee shop) and watch the silent assessment unfold.
@@ -19,12 +22,12 @@ Small individual differences organize us into groups, and those groups demand we
 
 For example, a random encounter between two people involves instant calculation: skin color suggests race, posture and eye contact signal confidence, clothing hints at wealth.
 Before a single word is spoken, each person has begun constructing an image of the other, filtering observations through their own experience and bias.
-The curiosity follows naturally, "where are you from?"
+The curiosity follows naturally, _"where are you from?"_
 We want to know how different they are and where that difference places them relative to us.
 For instance, if you believed that Asian people are not friendly and encountered one in your day, say at work or school or your commute, your mind would attempt to prove the point of unfriendliness.
 It oftentimes goes sideways.
 
-## forming groups
+## Forming groups
 
 It is common in schools for teachers to split the class into groups for an exercise.
 This is one of the many moments that prompt introspection about our desires and values.
@@ -51,7 +54,7 @@ This is when you lean back to your own group, reminding yourself and your teamma
 Often this is accompanied by identifying weak links in the other groups and sharing those observations within your circle.
 The inner belief grows stronger.
 
-## believing what we see
+## Believing what we see
 
 Let's say, groups are identified with colors like red, blue, green and so on.
 The belief is then tired to something physical that reminds everyone where they belong.
@@ -60,14 +63,15 @@ In the world today, a classic example is exhibited in sports teams each having i
 When people act in the world, doing the exercise in this case, we fight for the success of our group.
 This act solidifies and engraves the belief within us as we fight for the group.
 
-## finally
+## Finally
 
 The small differences will always organize us.
 The question is whether we let them define us.
 
-> Example from Claude Sonnet 4.5 on Feb 11, 2026
->
-> ## but what if we don't
+## But what if we don't
+
+An example from Claude Sonnet 4.5 on Feb 11, 2026
+
 > In programming, this pattern crystallizes clearly.
 > Tabs versus spaces, Python versus JavaScript, React versus Vue.
 > These aren't merely technical choices though they become identities.
