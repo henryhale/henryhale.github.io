@@ -41,6 +41,11 @@ html.scrolled header {
 
 main {
 	@apply flex-1 py-32;
+	@apply bg-[linear-gradient(to_bottom,rgba(255,255,255,1)_5%,transparent,transparent,transparent)];
+}
+
+html.dark main {
+	@apply bg-[linear-gradient(to_bottom,rgba(28,25,23,1)_5%,transparent,transparent,transparent)];
 }
 
 footer {
