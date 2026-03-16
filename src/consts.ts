@@ -1,7 +1,7 @@
 import type { Site, Page, Socials } from "@types"
 
 export const SITE: Site = {
-	IMAGE: "https://github.com/henryhale.png",
+	IMAGE: "/photo.png",
 	NAME: "Henry Hale",
 	NUM_POSTS_ON_HOMEPAGE: 4,
 	NUM_WORKS_ON_HOMEPAGE: 4,
