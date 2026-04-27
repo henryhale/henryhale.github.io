@@ -44,3 +44,7 @@ But I was certian, this was going nowhere.
 
 Reading wikis, docs, notes about the topic feels like crap to some.
 In fact, it seems like they're scared of the lone inner dialogue when reading the entire piece, keeping track of important information, and articulating the implications from the text.
+
+### Related Posts
+
+- [AI should elevate your thinking, not replace it - Koshyjohn.com](https://www.koshyjohn.com/blog/ai-should-elevate-your-thinking-not-replace-it/)

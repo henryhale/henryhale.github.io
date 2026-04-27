@@ -41,7 +41,7 @@ I don't need a helpful AI assistant. I need a friend that can:
 
 So, have you tried AI-assisted decision making? What measures can be put in place to ensure AI chatbots become truly helpful?
 
-Related posts:
+### Related posts:
 
 - [LLMs are steroids for your Dunning Kruger - Bytesauna.com](https://bytesauna.com/post/dunning-kruger)
 - [I think nobody wants AI in Firefox, Mozilla - Manualdousuario.net](https://manualdousuario.net/en/mozilla-firefox-window-ai/)
