@@ -1,0 +1,162 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import Container from "@components/Container.astro"
+import { formatDate } from "@lib/utils"
+import { renderThreadSvg } from "@lib/thread"
+
+export const prerender = true
+
+export async function getStaticPaths() {
+	const list = (await getCollection("threads"))
+		.filter((entry) => !entry.data.draft)
+		.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+	return list.map((entry) => ({
+		params: { id: entry.id },
+		props: { entry },
+	}))
+}
+
+type Props = {
+	entry: CollectionEntry<"threads">
+}
+
+const { entry } = Astro.props
+const { title, description, date, tags } = entry.data
+const lightSvg = renderThreadSvg(entry, "light")
+const darkSvg = renderThreadSvg(entry, "dark")
+---
+
+<PageLayout title={title} description={description}>
+	<TopLayout>
+		<div class="animate">
+			<a
+				href="/threads"
+				class="group w-fit p-1.5 gap-1.5 text-sm flex items-center border rounded hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke-width="2.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
+				>
+					<line
+						x1="19"
+						y1="12"
+						x2="5"
+						y2="12"
+						class="scale-x-0 group-hover:scale-x-100 translate-x-3 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+					></line>
+					<polyline
+						points="12 19 5 12 12 5"
+						class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+					></polyline>
+				</svg>
+				<div
+					class="w-full group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out"
+				>
+					Back to threads
+				</div>
+			</a>
+			<div class="flex items-center text-sm mt-12 gap-3 opacity-75">
+				<time>{formatDate(date)}</time>
+			</div>
+			<h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
+				{title}
+			</h1>
+			<div class="mt-1">
+				{description}
+			</div>
+			<ul class="mt-2 flex flex-wrap gap-1">
+				{
+					tags.map((tag) => (
+						<li class="text-xs uppercase py-0.5 px-2 rounded bg-black/5 dark:bg-white/10 text-black/75 dark:text-white/75">
+							{tag}
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</TopLayout>
+	<div class="flex-1 py-5">
+		<Container>
+			<div
+				class="animate thread-frame rounded-lg border border-black/15 dark:border-white/20 bg-stone-50 dark:bg-stone-900 overflow-x-auto"
+			>
+				<div class="thread-svg thread-svg-light" set:html={lightSvg} />
+				<div class="thread-svg thread-svg-dark" set:html={darkSvg} />
+			</div>
+		</Container>
+	</div>
+</PageLayout>
+
+<style>
+	.thread-frame {
+		scrollbar-color: rgba(87, 83, 78, 0.45) transparent;
+	}
+
+	:global(html.dark) .thread-frame {
+		scrollbar-color: rgba(168, 162, 158, 0.45) transparent;
+	}
+
+	.thread-svg {
+		min-width: 100%;
+	}
+
+	.thread-svg :global(svg) {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.thread-svg :global(a) {
+		cursor: pointer;
+		outline: none;
+	}
+
+	.thread-svg :global(a g[data-node-type] rect) {
+		filter: drop-shadow(0 1px 2px rgba(87, 83, 78, 0.18));
+		transition:
+			filter 180ms ease,
+			stroke 180ms ease,
+			stroke-width 180ms ease;
+	}
+
+	.thread-svg :global(a:hover g[data-node-type] rect),
+	.thread-svg :global(a:focus-visible g[data-node-type] rect) {
+		filter: drop-shadow(0 8px 16px rgba(87, 83, 78, 0.26));
+		stroke: #57534e;
+		stroke-width: 4px;
+	}
+
+	:global(html.dark) .thread-svg :global(a g[data-node-type] rect) {
+		filter: drop-shadow(0 1px 2px rgba(168, 162, 158, 0.16));
+	}
+
+	:global(html.dark) .thread-svg :global(a:hover g[data-node-type] rect),
+	:global(html.dark)
+		.thread-svg
+		:global(a:focus-visible g[data-node-type] rect) {
+		filter: drop-shadow(0 8px 16px rgba(168, 162, 158, 0.24));
+		stroke: #d6d3d1;
+	}
+
+	.thread-svg-dark {
+		display: none;
+	}
+
+	:global(html.dark) .thread-svg-light {
+		display: none;
+	}
+
+	:global(html.dark) .thread-svg-dark {
+		display: block;
+	}
+</style>

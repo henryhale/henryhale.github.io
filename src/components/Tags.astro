@@ -59,7 +59,7 @@ const list = ["All", ...tags]
 				activeTag = el
 				// show/hide tagged content
 				document
-					.querySelectorAll("li[data-tagged]")
+					.querySelectorAll("[data-tagged]")
 					.forEach(function (li) {
 						if (
 							el.dataset.tag === "All" ||

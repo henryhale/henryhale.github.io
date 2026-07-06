@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content"
+import { defineCollection } from "astro:content"
+import { z } from "astro/zod"
 import { glob, file } from "astro/loaders"
 
 const blog = defineCollection({
@@ -49,4 +50,54 @@ const projects = defineCollection({
 	}),
 })
 
-export const collections = { blog, work, projects }
+const threadNode = z.object({
+	id: z.string(),
+	title: z.string(),
+	description: z.string().optional(),
+	link: z.string().optional(),
+})
+
+const threadChild = z.discriminatedUnion("type", [
+	threadNode.extend({
+		type: z.literal("topic"),
+	}),
+	threadNode.extend({
+		type: z.literal("comment"),
+	}),
+])
+
+const threadBranch = z.discriminatedUnion("type", [
+	threadNode.extend({
+		type: z.literal("topic"),
+	}),
+	threadNode.extend({
+		type: z.literal("comment"),
+	}),
+	threadNode.extend({
+		type: z.literal("group"),
+		children: z.array(threadChild),
+	}),
+])
+
+const threads = defineCollection({
+	loader: file("src/content/threads/index.yaml"),
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		date: z.coerce.date(),
+		draft: z.boolean().optional(),
+		tags: z.array(z.string()),
+		spine: z.array(
+			threadNode.extend({
+				left: z.array(threadBranch).default([]),
+				right: z.array(threadBranch).default([]),
+			})
+		),
+	}),
+})
+export const collections = {
+	blog,
+	work,
+	projects,
+	threads,
+}

@@ -29,6 +29,12 @@ export const PROJECTS: Page = {
 		"A collection of my projects, with links to repositories and demos.",
 }
 
+export const THREADS: Page = {
+	TITLE: "Threads",
+	DESCRIPTION:
+		"A view of computer science as a sequence of problems and solutions.",
+}
+
 export const CONTACT: Page = {
 	TITLE: "Contact",
 	DESCRIPTION: "Say Hello. I'd love to hear from you.",

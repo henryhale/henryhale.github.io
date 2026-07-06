@@ -1,0 +1,72 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+import ArrowCard from "@components/ArrowCard.astro"
+import Tags from "@components/Tags.astro"
+import { THREADS } from "@consts"
+
+export const prerender = true
+
+const data = (await getCollection("threads"))
+	.filter((entry) => !entry.data.draft)
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+const tags = [...new Set(data.flatMap((entry) => entry.data.tags))].sort(
+	(a, b) => a.localeCompare(b)
+)
+
+type Acc = {
+	[year: string]: CollectionEntry<"threads">[]
+}
+
+const threads = data.reduce((acc: Acc, entry) => {
+	const year = entry.data.date.getFullYear().toString()
+	if (!acc[year]) {
+		acc[year] = []
+	}
+	acc[year].push(entry)
+	return acc
+}, {})
+
+const years = Object.keys(threads).sort((a, b) => parseInt(b) - parseInt(a))
+---
+
+<PageLayout title={THREADS.TITLE} description={THREADS.DESCRIPTION}>
+	<TopLayout>
+		<div class="animate">
+			<h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
+				{THREADS.TITLE}
+			</h1>
+			<div class="mt-1">
+				{THREADS.DESCRIPTION}
+			</div>
+			<div class="mt-2">
+				<Tags tags={tags} />
+			</div>
+		</div>
+	</TopLayout>
+	<BottomLayout>
+		<div class="space-y-16">
+			{
+				years.map((year) => (
+					<section class="animate space-y-4">
+						<div class="font-semibold text-black dark:text-white">
+							{year}
+						</div>
+						<div>
+							<ul class="flex flex-col gap-4">
+								{threads[year].map((entry) => (
+									<li data-tagged={entry.data.tags.join(",")}>
+										<ArrowCard entry={entry} />
+									</li>
+								))}
+							</ul>
+						</div>
+					</section>
+				))
+			}
+		</div>
+	</BottomLayout>
+</PageLayout>

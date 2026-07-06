@@ -1,0 +1,28 @@
+initial-commit:
+    title: Initial Commit
+    description: A tiny first thread to confirm the format, page, and SVG renderer are working.
+    date: Jul 07 2026
+    tags:
+        - meta
+        - thread
+    spine:
+        - id: initial-thread
+          title: First Thread
+          left:
+              - type: topic
+                id: idea
+                title: Idea
+                description: Name the format and keep the first version small.
+              - type: comment
+                id: note
+                title: This is a starting point, not the full system.
+          right:
+              - type: topic
+                id: render
+                title: Render
+                description: Generate a static SVG from structured content.
+              - type: topic
+                id: publish
+                title: Publish
+                description: Ship one thread and improve the format from real use.
+                link: https://github.com/henryhale/
