@@ -50,6 +50,22 @@ const projects = defineCollection({
 	}),
 })
 
+const talks = defineCollection({
+	loader: file("src/content/talks/index.yaml"),
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		date: z.coerce.date(),
+		draft: z.boolean().optional(),
+		event: z.string().optional(),
+		slidesURL: z.string().optional(),
+		repoURL: z.string().optional(),
+		linkedinURL: z.string().optional(),
+		videoURL: z.string().optional(),
+		tags: z.array(z.string()),
+	}),
+})
+
 const threadNode = z.object({
 	id: z.string(),
 	title: z.string(),
@@ -99,5 +115,6 @@ export const collections = {
 	blog,
 	work,
 	projects,
+	talks,
 	threads,
 }

@@ -1,0 +1,75 @@
+---
+import type { CollectionEntry } from "astro:content"
+import Icon from "@components/Icon.astro"
+import { formatDate } from "@lib/utils"
+
+type Props = {
+	entry: CollectionEntry<"talks">
+}
+
+const { entry } = Astro.props
+const { title, description, date, event, tags } = entry.data
+const { slidesURL, repoURL, linkedinURL, videoURL } = entry.data
+
+const links = [
+	{ href: slidesURL, icon: "globe", label: "Slides" },
+	{ href: repoURL, icon: "github", label: "Repository" },
+	{ href: linkedinURL, icon: "linkedin", label: "LinkedIn Post" },
+	{ href: videoURL, icon: "play", label: "Recording" },
+].filter((link) => Boolean(link.href))
+---
+
+<div
+	class="flex flex-col py-3 px-4 rounded-lg border border-black/15 dark:border-white/20"
+>
+	<div class="flex flex-wrap gap-x-3 text-xs">
+		<time>
+			{formatDate(date)}
+		</time>
+		{
+			event && (
+				<>
+					<span>&bull;</span>
+					<span>{event}</span>
+				</>
+			)
+		}
+	</div>
+	<div class="font-semibold mt-3 text-black dark:text-white">
+		{title}
+	</div>
+	<div class="text-sm text-wrap">
+		{description}
+	</div>
+	<ul class="flex flex-wrap mt-2 gap-1">
+		{
+			tags.map((tag: string) => (
+				<li class="text-xs uppercase py-0.5 px-2 rounded bg-black/5 dark:bg-white/10 text-black/75 dark:text-white/75">
+					{tag}
+				</li>
+			))
+		}
+	</ul>
+	{
+		links.length > 0 && (
+			<div class="mt-4 flex flex-wrap gap-2">
+				{links.map((link) => (
+					<a
+						href={link.href}
+						target="_blank"
+						aria-label={`${title} - ${link.label}`}
+						class="group flex gap-2 items-center px-3 py-1.5 truncate rounded text-xs md:text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 transition-colors duration-300 ease-in-out"
+					>
+						<Icon
+							name={link.icon}
+							class="size-4 fill-current group-hover:fill-black group-hover:dark:fill-white transition-colors duration-300 ease-in-out"
+						/>
+						<span class="text-current group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out">
+							{link.label}
+						</span>
+					</a>
+				))}
+			</div>
+		)
+	}
+</div>

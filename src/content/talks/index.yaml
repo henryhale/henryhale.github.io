@@ -1,0 +1,40 @@
+attention:
+    title: How much attention do we really need?
+    description: An AI talk about focus, context, and what intelligence chooses to notice.
+    date: Aug 15 2026
+    slidesURL: https://henryhale.github.io/ai-attention-talk/
+    repoURL: https://github.com/henryhale/ai-attention-talk
+    # linkedinURL:
+    tags:
+        - ai
+        - attention
+
+rag-pipeline:
+    title: "Building a RAG Pipeline in Pure Node.js"
+    description: 🧠 From embeddings to vector search - ingestion, embedding, storage and generation without a single framework.
+    date: May 02 2026
+    slidesURL: https://henryhale.github.io/ai-rag-talk/
+    repoURL: https://github.com/henryhale/ai-rag-talk
+    # linkedinURL:
+    tags:
+        - ai
+        - rag
+        - nodejs
+# Add a talk by copying the block above.
+#
+# Required: title, description, date, tags
+# Optional: event, slidesURL, repoURL, linkedinURL, videoURL, draft
+#
+# example:
+#   my-talk:
+#       title: Talk title
+#       description: One-line summary of the talk.
+#       date: Jan 01 2026
+#       event: Meetup or conference name
+#       slidesURL: https://...
+#       repoURL: https://github.com/henryhale/...
+#       linkedinURL: https://www.linkedin.com/posts/...
+#       videoURL: https://...
+#       draft: true
+#       tags:
+#           - ai
