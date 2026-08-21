@@ -165,6 +165,29 @@ worstcase:
 #     - javascript
 #     - web-app
 
+embeddings:
+    title: Embedding Explorer
+    description: 🧭 Train word embeddings from scratch and explore them in an interactive 3D space.
+    date: Aug 15 2026
+    demoURL: https://57lvs4mmne9bjnb8xxupsu.streamlit.app/
+    repoURL: https://github.com/henryhale/embeddings
+    tags:
+        - ai
+        - python
+        - web-app
+
+whatsapp-analyzer:
+    title: WhatsApp Chat Analyzer
+    description: 💬 Analyze, summarize and chat with your exported WhatsApp conversations - entirely on your own machine.
+    date: Aug 15 2026
+    demoURL: https://whatsapp-analyzer-f6ppmgg6eypypgixnnczjk.streamlit.app/
+    repoURL: https://github.com/henryhale/whatsapp-analyzer
+    screenshotURL: https://github.com/henryhale/whatsapp-analyzer/raw/master/media/overview.png
+    tags:
+        - ai
+        - python
+        - web-app
+
 ilovemedia:
     title: iLoveMedia
     description: 💙 A collection of powerful media utilities that run entirely in your browser.
