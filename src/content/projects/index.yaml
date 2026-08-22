@@ -171,6 +171,7 @@ embeddings:
     date: Aug 15 2026
     demoURL: https://57lvs4mmne9bjnb8xxupsu.streamlit.app/
     repoURL: https://github.com/henryhale/embeddings
+    screenshotURL: https://github.com/henryhale/embeddings/raw/master/media/screenshot.png
     tags:
         - ai
         - python
