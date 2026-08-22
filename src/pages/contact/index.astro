@@ -1,5 +1,6 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro"
+import Button from "@components/Button.astro"
 import Container from "@components/Container.astro"
 import Link from "@components/Link.astro"
 import Icon from "@components/Icon.astro"
@@ -66,12 +67,14 @@ import { CONTACT, SITE, SOCIALS } from "@consts"
 				<FormInput label="Email Address" type="email" name="email" />
 				<FormInput label="Subject" type="text" name="subject" />
 				<FormInput label="Message" type="textarea" name="message" />
-				<button
+				<Button
+					as="button"
 					type="submit"
-					class="block w-full mt-4 px-2 py-1 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+					variant="action"
+					class="w-full mt-4 justify-center"
 				>
 					<span>Send Message</span>
-				</button>
+				</Button>
 			</form>
 		</div>
 	</Container>

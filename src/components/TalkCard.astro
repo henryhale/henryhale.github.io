@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content"
+import Button from "@components/Button.astro"
 import Icon from "@components/Icon.astro"
 import { formatDate } from "@lib/utils"
 
@@ -11,12 +12,21 @@ const { entry } = Astro.props
 const { title, description, date, event, tags } = entry.data
 const { slidesURL, repoURL, linkedinURL, videoURL } = entry.data
 
-const links = [
-	{ href: slidesURL, icon: "globe", label: "Slides" },
+type TalkLink = {
+	href?: string
+	icon: string
+	label: string
+	variant?: "primary" | "action"
+}
+
+const allLinks: TalkLink[] = [
+	{ href: slidesURL, icon: "globe", label: "Slides", variant: "action" },
 	{ href: repoURL, icon: "github", label: "Repository" },
 	{ href: linkedinURL, icon: "linkedin", label: "LinkedIn Post" },
 	{ href: videoURL, icon: "play", label: "Recording" },
-].filter((link) => Boolean(link.href))
+]
+
+const links = allLinks.filter((link) => Boolean(link.href))
 ---
 
 <div
@@ -54,20 +64,15 @@ const links = [
 		links.length > 0 && (
 			<div class="mt-4 flex flex-wrap gap-2">
 				{links.map((link) => (
-					<a
+					<Button
 						href={link.href}
 						target="_blank"
+						variant={link.variant}
 						aria-label={`${title} - ${link.label}`}
-						class="group flex gap-2 items-center px-3 py-1.5 truncate rounded text-xs md:text-sm border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 transition-colors duration-300 ease-in-out"
 					>
-						<Icon
-							name={link.icon}
-							class="size-4 fill-current group-hover:fill-black group-hover:dark:fill-white transition-colors duration-300 ease-in-out"
-						/>
-						<span class="text-current group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out">
-							{link.label}
-						</span>
-					</a>
+						<Icon name={link.icon} class="size-4 fill-current" />
+						<span>{link.label}</span>
+					</Button>
 				))}
 			</div>
 		)

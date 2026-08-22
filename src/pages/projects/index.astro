@@ -4,7 +4,8 @@ import PageLayout from "@layouts/PageLayout.astro"
 import TopLayout from "@layouts/TopLayout.astro"
 import BottomLayout from "@layouts/BottomLayout.astro"
 import ArrowCard from "@components/ArrowCard.astro"
-import Link from "@components/Link.astro"
+import Button from "@components/Button.astro"
+import Icon from "@components/Icon.astro"
 import Tags from "@components/Tags.astro"
 import { PROJECTS } from "@consts"
 
@@ -41,17 +42,21 @@ const tags = [
 				))
 			}
 		</ul>
-		<p class="text-center mt-10">
-			<span>The projects above are my favorite,</span>
-			<br />
-			👇
-			<br />
-			<Link
+		<div class="mt-10 flex flex-col items-center gap-4">
+			<p class="text-center">
+				<span>The projects above are my favorite,</span>
+				<br />
+				👇
+			</p>
+			<Button
 				href="https://github.com/henryhale?tab=repositories"
+				target="_blank"
+				variant="action"
 				aria-label="Check out all my projects on GitHub"
 			>
-				View all projects on GitHub.
-			</Link>
-		</p>
+				<Icon name="github" class="size-4 fill-current" />
+				<span>View all projects on GitHub</span>
+			</Button>
+		</div>
 	</BottomLayout>
 </PageLayout>

@@ -3,6 +3,7 @@ import { getCollection } from "astro:content"
 import Container from "@components/Container.astro"
 import PageLayout from "@layouts/PageLayout.astro"
 import ArrowCard from "@components/ArrowCard.astro"
+import Button from "@components/Button.astro"
 import Link from "@components/Link.astro"
 import { SITE, HOME } from "@consts"
 
@@ -35,8 +36,9 @@ const projects = (await getCollection("projects"))
 		<div class="space-y-16">
 			<article class="space-y-4 text-center">
 				<p class="animate">
-					Software developer in Kampala, Uganda.
-					I enjoy building things, and right now I'm focused on deepening my knowledge in AI/ML and tooling.
+					Software developer in Kampala, Uganda. I enjoy building
+					things, and right now I'm focused on deepening my knowledge
+					in AI/ML and tooling.
 				</p>
 			</article>
 
@@ -90,14 +92,13 @@ const projects = (await getCollection("projects"))
 						just to say hi, reach out on social media.
 					</p>
 				</article>
-				<ul class="flex flex-wrap gap-2">
-					<li class="flex items-center gap-x-2 text-nowrap">
-						<span>➡️</span>
-						<Link href="/contact" aria-label="Get in touch">
-							Get in Touch
-						</Link>
-					</li>
-				</ul>
+				<Button
+					href="/contact"
+					variant="action"
+					aria-label="Get in touch"
+				>
+					Get in Touch
+				</Button>
 			</section>
 		</div>
 	</Container>

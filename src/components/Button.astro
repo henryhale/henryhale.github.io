@@ -1,0 +1,35 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+type Props = HTMLAttributes<"a"> &
+	HTMLAttributes<"button"> & {
+		as?: "a" | "button"
+		variant?: "primary" | "action"
+	}
+
+const {
+	as: Tag = "a",
+	variant = "primary",
+	class: className,
+	...rest
+} = Astro.props
+
+const variants = {
+	// outlined - the default across the site
+	primary:
+		"border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 hover:text-black dark:hover:text-white",
+	// solid - for the main call to action on a page
+	action: "no-underline border-transparent bg-black text-white hover:bg-black/80 hover:text-white dark:bg-white dark:text-black dark:hover:bg-white/90 dark:hover:text-black",
+}
+---
+
+<Tag
+	class:list={[
+		"group inline-flex items-center gap-2 truncate rounded border px-3 py-1.5 text-sm transition-colors duration-300 ease-in-out",
+		variants[variant],
+		className,
+	]}
+	{...rest}
+>
+	<slot />
+</Tag>
