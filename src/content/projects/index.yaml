@@ -211,3 +211,14 @@ ilovemedia:
     tags:
         - typescript
         - web-app
+
+webdraw:
+    title: Webdraw
+    description: ✏️ A drawing editor exposed as the <web-draw> web component.
+    date: Sep 14 2026
+    demoURL: https://henryhale.github.io/webdraw
+    repoURL: https://github.com/henryhale/webdraw
+    logoURL: https://github.com/henryhale/webdraw/raw/master/docs/public/logo.svg
+    tags:
+        - typescript
+        - library
