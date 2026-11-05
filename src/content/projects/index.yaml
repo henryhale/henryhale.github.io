@@ -229,6 +229,7 @@ kintu-1.0:
     date: Nov 5 2026
     demoURL: https://kintu-demo-kq5xakecfjqwi2jdxco6kq.streamlit.app/
     repoURL: https://huggingface.co/henryhale/Kintu-1.0-39M
+    screenshotURL: https://raw.githubusercontent.com/henryhale/kintu-demo/main/screenshot.png
     tags:
         - ai
         - python
