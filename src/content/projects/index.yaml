@@ -222,3 +222,13 @@ webdraw:
     tags:
         - typescript
         - library
+
+kintu-1.0:
+    title: Kintu-1.0
+    description: 🗣️ A small 39M-parameter language model that chats in Luganda.
+    date: Nov 5 2026
+    demoURL: https://kintu-demo-kq5xakecfjqwi2jdxco6kq.streamlit.app/
+    repoURL: https://huggingface.co/henryhale/Kintu-1.0-39M
+    tags:
+        - ai
+        - python
