@@ -229,6 +229,17 @@ kintu-1.0:
     date: Nov 5 2026
     demoURL: https://kintu-demo-kq5xakecfjqwi2jdxco6kq.streamlit.app/
     repoURL: https://huggingface.co/henryhale/Kintu-1.0-39M
+    screenshotURL: https://raw.githubusercontent.com/henryhale/kintu-demo/6e5f0dd559a68a1b534fcc0d91170fe7542ca6e2/screenshot.png
+    tags:
+        - ai
+        - python
+
+kintu-2.0:
+    title: Kintu-2.0
+    description: 🗣️ A 30M-parameter Luganda chat model trained from scratch.
+    date: Nov 9 2026
+    demoURL: https://kintu-demo-kq5xakecfjqwi2jdxco6kq.streamlit.app/
+    repoURL: https://huggingface.co/henryhale/Kintu-2.0-30M
     screenshotURL: https://raw.githubusercontent.com/henryhale/kintu-demo/main/screenshot.png
     tags:
         - ai
