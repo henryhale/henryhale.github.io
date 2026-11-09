@@ -9,6 +9,12 @@ tags:
 
 [Kintu-1.0-39M](https://huggingface.co/henryhale/Kintu-1.0-39M) is a small language model that replies in Luganda. It's on Hugging Face, and there's a [live demo](https://kintu-demo-kq5xakecfjqwi2jdxco6kq.streamlit.app/) where you can chat with it.
 
+## Why Kintu
+
+Most [Luganda models on Hugging Face](https://huggingface.co/models?search=luganda) only do translation. The [small ones](https://huggingface.co/goldfish-models/lug_latn_10mb) are often inaccurate. The [large ones](https://huggingface.co/Sunbird/Sunflower-32B) are good, but they're too big to run on your own device. I couldn't find an open-weight model that is tiny, runs on-device and can hold a conversation in Luganda. Kintu-1.0 is a first step towards that. It's a small, efficient model that talks in Luganda from the start, without translating from English.
+
+The name comes from Buganda's origin story, where Kintu is the first Muganda. Kintu-1.0 is meant to be a first too, a Luganda language model that anyone can run on their own device. In everyday Luganda, _kintu_ also means "thing", which fits a small model with modest goals.
+
 ## The base model
 
 I didn't train Kintu-1.0 from scratch. It's a fine-tune of [goldfish-models/lug_latn_10mb](https://huggingface.co/goldfish-models/lug_latn_10mb), a small GPT-2 model (4 layers, hidden size 512) pretrained on about 10 MB of Luganda text. Kintu-1.0 keeps the base model's 50k-token Unigram tokenizer unchanged.
@@ -68,5 +74,9 @@ You can type your own message or tap a suggestion like _"Oli otya?"_. The sideba
 ## What it can't do
 
 Kintu-1.0 is an experiment. It has no factual knowledge, its replies read like translated English because that's what it learned from, and it may carry biases from its pretraining text, the source conversations and the translation model. Don't use it for factual questions, advice or serious emotional topics. It's licensed CC BY-NC 4.0, so non-commercial use only.
+
+## Credits
+
+Two projects made Kintu possible. [SmolLM](https://huggingface.co/blog/smollm) from Hugging Face showed that small models can still be useful and run on-device, and its SmolTalk dataset is part of Kintu's training data. [MiniMind](https://github.com/jingyaogong/minimind) showed that you can train a working chat model from scratch on modest hardware and a tiny budget, which convinced me to try the same for Luganda. Thanks also to the [Goldfish team](https://huggingface.co/goldfish-models) for the [base model](https://huggingface.co/goldfish-models/lug_latn_10mb) and to Meta for [NLLB-200](https://huggingface.co/facebook/nllb-200-distilled-600M).
 
 Give it a try and say _"Oli otya?"_.
