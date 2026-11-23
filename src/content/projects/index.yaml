@@ -244,3 +244,14 @@ kintu-2.0:
     tags:
         - ai
         - python
+
+tiny-voca-lg:
+    title: Tiny-Voca-LG
+    description: 🔊 An extremely small 4.5M-parameter Luganda text-to-speech model based on tiny-voca.
+    date: Nov 22 2026
+    demoURL: https://henryhale.github.io/tiny-voca-lg/
+    repoURL: https://github.com/henryhale/tiny-voca-lg
+    screenshotURL: https://raw.githubusercontent.com/henryhale/tiny-voca-lg/master/screenshot.png
+    tags:
+        - ai
+        - python
