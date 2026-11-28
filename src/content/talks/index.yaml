@@ -15,6 +15,7 @@ attention:
     title: How much attention do we really need?
     description: An AI talk about focus, context, and what intelligence chooses to notice.
     date: Aug 15 2026
+    event: Qwen AI Series · Episode 1
     slidesURL: https://henryhale.github.io/ai-attention-talk/
     repoURL: https://github.com/henryhale/ai-attention-talk
     # linkedinURL:
@@ -26,6 +27,7 @@ rag-pipeline:
     title: "Building a RAG Pipeline in Pure Node.js"
     description: 🧠 From embeddings to vector search - ingestion, embedding, storage and generation without a single framework.
     date: May 02 2026
+    event: JavaScript Kampala
     slidesURL: https://henryhale.github.io/ai-rag-talk/
     repoURL: https://github.com/henryhale/ai-rag-talk
     # linkedinURL:
