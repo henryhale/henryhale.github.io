@@ -1,3 +1,16 @@
+beyond-the-api:
+    title: "Beyond the API: Engineering AI Systems from First Principles"
+    description: Why I stopped waiting for big models to learn Luganda and built small ones instead - Kintu for text and Tiny-Voca-LG for speech.
+    date: Nov 27 2026
+    event: Qwen AI Series · UTAMU Kungu Campus
+    slidesURL: https://henryhale.github.io/ai-beyond-the-api-talk/
+    repoURL: https://github.com/henryhale/ai-beyond-the-api-talk
+    # linkedinURL:
+    tags:
+        - ai
+        - luganda
+        - small-models
+
 attention:
     title: How much attention do we really need?
     description: An AI talk about focus, context, and what intelligence chooses to notice.
